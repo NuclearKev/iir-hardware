@@ -42,9 +42,19 @@ architecture Behavioral of iir is
   variable a_coeff : a_elem;
   variable b_coeff : b_elem;
 
+  -- Data array
+  type data_array is array (11 downto 0) of STD_LOGIC_VECTOR;
+  type data_elem is array (9 downto 0) of data_array;
+  variable data : data_elem;
+
   -- Assigning the values (not correct yet)
   a_coeff := (0x"E168");
   b_coeff := ();
+
+  -- Initialize data array to zeros
+  data := (0x"0000", 0x"0000", 0x"0000", 0x"0000", 0x"0000", 0x"0000", 0x"0000",
+           0x"0000", 0x"0000", 0x"0000");
+
 begin
 
   process(Clk)
