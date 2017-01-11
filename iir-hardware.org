@@ -1,0 +1,36 @@
+#+TITLE: IIR Filters in Hardware
+#+OPTIONS: toc:nil num:nil
+
+* Generic
+	- Generally used in lower samples rates, less than 200kHz.
+	- Sometimes called /recursive filters/ because of the feedback
+	- Advantages of a FIR filter:
+		- Linear phase that is stable
+		- Insensitivity to quantization effect
+		- Ease of design
+		- Do not suffer from limit cycle issues like filter oscillation
+	- Advantages to an IIR Filter:
+		- Better magnitude responses
+		- Require fewer coefficients
+		- Require less storage for variables
+		- Lower latency
+		- Tend to have outputs closer to analog models
+
+* IIR Filter Structure
+	Parts:
+	- Forward FIR Filter (known as the all-zero filter)
+		- Numerator: b coefficients for the zeros
+	- Feedback FIR
+		- Denominator: a coefficients for the poles
+** Fixed-point Implementation
+	 There are four items that will ensure good operation for fixed-pointed IIR
+	 designs.
+	 - Coefficient Quantization
+	 - Internal Quantization
+	 - Overflow
+	 - Stability
+
+* Things to figure out
+	- Arrays in VHDL
+	- Limiting the bit widths
+	- HOW TO DO DIS
