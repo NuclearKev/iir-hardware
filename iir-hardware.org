@@ -30,6 +30,14 @@
 	 - Overflow
 	 - Stability
 
+** Direct Form 1 Structures
+	 Check [[https://vhdlguru.blogspot.com/2011/01/what-is-pipelining-explanation-with.html][this]] for information on /pipelining/ in VHDL. It's great stuff!
+	 - For the multiplications (and maybe the additions), use the /pipeline/
+     method.
+		 - Allows for a higher clock frequency
+		 - Reduces synthesis times
+		 - Increase throughput for the system
+
 * Things to figure out
 	- Arrays in VHDL
 	- Limiting the bit widths

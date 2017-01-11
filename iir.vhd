@@ -25,16 +25,31 @@ library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
 use IEEE.NUMERIC_STD.ALL;
 
--- These are obviously NOT the correct inouts... They will be changed soon
+-- As of now, the coefficients will be internally set contstants
 entity iir is
-    Port ( input : in STD_LOGIC_VECTOR (11 downto 0);
-           output : out STD_LOGIC_VECTOR (11 downto 0));
+  Port ( Clk      : in STD_LOGIC;       --probably should be a fast non-fs clock
+         data_in  : in STD_LOGIC_VECTOR  (11 downto 0);
+         data_out : out STD_LOGIC_VECTOR (11 downto 0));
 end iir;
 
 architecture Behavioral of iir is
 
+  -- Defining of the coefficient arrays
+  type a is array (14 downto 0) of STD_LOGIC_VECTOR;
+  type a_elem is array (8 downto 0) of a;
+  type b is array (14 downto 0) of STD_LOGIC_VECTOR;
+  type b_elem is array (9 downto 0) of b;
+  variable a_coeff : a_elem;
+  variable b_coeff : b_elem;
+
+  -- Assigning the values (not correct yet)
+  a_coeff := (0x"E168");
+  b_coeff := ();
 begin
 
-  output <= abs (input);                --Yeah, it's that easy...
+  process(Clk)
+  begin
+    -- Calculations go here! Don't forget to use pipelining!
+  end process;
 
 end Behavioral;
