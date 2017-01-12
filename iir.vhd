@@ -34,32 +34,54 @@ end iir;
 
 architecture Behavioral of iir is
 
+  signal fir_out : STD_LOGIC_VECTOR(11 downto 0);
+
   -- Defining of the coefficient arrays
-  type a is array (14 downto 0) of STD_LOGIC_VECTOR;
+  type a is array (14 downto 0) of integer;
   type a_elem is array (8 downto 0) of a;
-  type b is array (14 downto 0) of STD_LOGIC_VECTOR;
+  type b is array (14 downto 0) of integer;
   type b_elem is array (9 downto 0) of b;
-  variable a_coeff : a_elem;
-  variable b_coeff : b_elem;
+  signal a_coeff : a_elem;
+  signal b_coeff : b_elem;
 
   -- Data array
-  type data_array is array (11 downto 0) of STD_LOGIC_VECTOR;
+  type data_array is array (11 downto 0) of integer;
   type data_elem is array (9 downto 0) of data_array;
-  variable data : data_elem;
-
-  -- Assigning the values (not correct yet)
-  a_coeff := (0x"E168");
-  b_coeff := ();
-
-  -- Initialize data array to zeros
-  data := (0x"0000", 0x"0000", 0x"0000", 0x"0000", 0x"0000", 0x"0000", 0x"0000",
-           0x"0000", 0x"0000", 0x"0000");
+  signal data : data_elem;
 
 begin
 
-  process(Clk)
+  data_out <= fir_out;
+
+  -- Assigning the coefficient values
+  a_coeff <= ( 222, 222, 222, 222, 222, 222, 222, 222, 222 );
+  b_coeff <= ( 222, 222, 222, 222, 222, 222, 222, 222, 222, 222 );
+
+  -- Initialize data array to zeros
+  data <= ( x"0009", x"0008", x"0007", x"0006", x"0005", x"0004", x"0003",
+           x"0002", x"0001", x"0000" );
+
+  process(Clk,a_coeff,b_coeff,data)
   begin
-    -- Calculations go here! Don't forget to use pipelining!
+
+    -- variable buf : integer := 0;        -- Declare loop variable here
+    if(rising_edge(Clk)) then
+
+      fir_out <= data(0)*b_coeff(0) + data(1)*b_coeff(1) + data(2)*b_coeff(2) +
+      data(3)*b_coeff(3) + data(4)*b_coeff(4);
+
+    end if;
+    -- Right shift the data array here
+
+    -- for i in 0 to 9 loop
+    --   case i is
+    --     when 0 => temp1 <= a*data;
+    --     when 1 => temp2 <= temp1*b;
+    --     when 2 => result <= temp2*c;
+    --     when others => null;
+    --   end case;
+    -- end loop;
+
   end process;
 
 end Behavioral;
