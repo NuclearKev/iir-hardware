@@ -33,3 +33,22 @@
   *mistakes and will test it out in Vivado someday.*
 
 	End: 8:37PM
+* Friday, 1/13/17
+	Start: 3:00PM
+
+	I began working with Vivado to hopefully see if my FIR was working.
+
+	Problem: I had many issues that were present. Such was declaring variables in
+	the wrong part of the design. They /must/ go in a process /before/ the `begin'
+	statement. Also, I had an issue with Vivado in general. I couldn't get the ILA
+	working very well.
+
+	I've decided to just go in and try it with actual voltages.
+
+	Issues: There are a handful of issues that I will need to take care of before
+	I can even do anything with the XADC.
+	- I will need a GPIO to output the correct channel to the IP.
+	- I need to get the IP to actually build.
+	- Pain and suffering.
+
+  End: 5:16PM
