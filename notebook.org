@@ -1,0 +1,35 @@
+#+TITLE: IIR Hardware Notebook
+
+* Wednesday, 1/11/17
+	Start: 2:00PM
+
+	I started actually creating the VHDL file. I started by just placing the
+	things that I believed needed to be there. The entity and architecture were
+	built kinda.
+
+	End: 5:00PM
+
+	Start: 7:45PM
+
+	I found a [[https://github.com/tgingold/ghdl][program]] that will simulate VHDL. My entire design is screwed up!
+
+	I basically worked out most of the kinks /except/ the arrays aren't happy.
+
+	End: 8:50 PM
+
+* Thursday, 1/12/17
+	Start: 7:45PM
+
+	Attempting to fix these arrays...
+
+	I fixed the arrays... They're even worse than I thought! Damn you VHDL... Damn
+	you.
+
+	Anyways, I'm ready to test my FIR design. Vivado! Oh Vivado, where art thou
+	Vivado!?
+
+	*IMPORTANT NOTE: GHDL seems to think certain pieces of "code" are incorrect*
+  *when they seem perfectly fine. As of now, I'm assuming GHDL is making*
+  *mistakes and will test it out in Vivado someday.*
+
+	End: 8:37PM

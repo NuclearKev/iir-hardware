@@ -37,38 +37,59 @@ architecture Behavioral of iir is
   signal fir_out : STD_LOGIC_VECTOR(11 downto 0);
 
   -- Defining of the coefficient arrays
-  type a is array (14 downto 0) of integer;
-  type a_elem is array (8 downto 0) of a;
-  type b is array (14 downto 0) of integer;
-  type b_elem is array (9 downto 0) of b;
-  signal a_coeff : a_elem;
-  signal b_coeff : b_elem;
+  type a_int is array (4 downto 0) of integer;
+  -- type a_elem is array (8 downto 0) of a;
+  -- type b is array (14 downto 0) of integer;
+  -- type b_elem is array (9 downto 0) of b;
+  -- signal a_coeff : a_elem;
+  -- signal b_coeff : b_elem;
+
+  signal a : a_int := (
+    0 => 1,
+    1 => 2,
+    2 => 3,
+    3 => 4,
+    4 => 5,
+    others => 0);
 
   -- Data array
-  type data_array is array (11 downto 0) of integer;
-  type data_elem is array (9 downto 0) of data_array;
-  signal data : data_elem;
+  type data_array is array (4 downto 0) of integer;
+  -- type data_elem is array (9 downto 0) of data_array;
+  signal data : data_array := (
+    0 => 5,
+    1 => 4,
+    2 => 3,
+    3 => 2,
+    4 => 1,
+    others => 0);
 
 begin
 
   data_out <= fir_out;
 
   -- Assigning the coefficient values
-  a_coeff <= ( 222, 222, 222, 222, 222, 222, 222, 222, 222 );
-  b_coeff <= ( 222, 222, 222, 222, 222, 222, 222, 222, 222, 222 );
+  -- a_coeff <= ( 2, 2, 2, 2, 2, 2, 2, 2, 2 );
+  -- b_coeff <= ( 2, 2, 2, 2, 2, 2, 2, 2, 2, 2 );
 
   -- Initialize data array to zeros
-  data <= ( x"0009", x"0008", x"0007", x"0006", x"0005", x"0004", x"0003",
-           x"0002", x"0001", x"0000" );
+  -- data <= ( x"0009", x"0008", x"0007", x"0006", x"0005", x"0004", x"0003",
+  --          x"0002", x"0001", x"0000" );
 
-  process(Clk,a_coeff,b_coeff,data)
+  fir: process(Clk,data)
   begin
 
     -- variable buf : integer := 0;        -- Declare loop variable here
     if(rising_edge(Clk)) then
 
-      fir_out <= data(0)*b_coeff(0) + data(1)*b_coeff(1) + data(2)*b_coeff(2) +
-      data(3)*b_coeff(3) + data(4)*b_coeff(4);
+      -- Shift the data array and feed in the new data
+      variable i : integer := 0;
+      for i in 0 to 4 loop
+        data(i+1) <= data(i);
+      end loop;
+      data(0) <= data_in;
+
+      fir_out <= data(0)*a(0) + data(1)*a(1) + data(2)*a(2) + data(3)*a(3) +
+                 data(4)*a(4);
 
     end if;
     -- Right shift the data array here
@@ -82,6 +103,6 @@ begin
     --   end case;
     -- end loop;
 
-  end process;
+  end process fir;
 
 end Behavioral;
