@@ -52,3 +52,33 @@
 	- Pain and suffering.
 
   End: 5:16PM
+
+* Sunday, 1/15/17
+	Start 3:45PM
+
+	I started out by editing a past project so that the Zynq processor will
+	automatically reroute the ADC value to the newly created FIR IP. There are
+	some issues that I'm running into, however.
+	Issues:
+	- Bitstream of the IP won't generate due to timing issues.
+	- The timing of both the IP and the entire project may be off because of the
+    following:
+		- Timing failures of IP
+		- Bad timing having to do the calculation and start the DA2 etc.
+
+	*NOTE: IF I WISH TO DO JUST HARDWARE, I NEED A NEW FSM.*
+	- However, the Zynq stuff worked, but I forgot to add the offset.
+
+	*UPDATE: Instead of trying to do the /just/ hardware, I will use the Zynq as*
+	*a rerouting device for the XADC values. This will allow me to not have to*
+	*worry /too/ much about the timing parts.*
+
+	After adding in the offset, I got a running average FIR working! (coeff values
+	all set to 0x1999)
+
+	Let us try another FIR filter and see how it works. (with internal coeffs to
+	the IP).
+
+	*I can't seem to get another FIR to work yet.*
+
+	END: 6:23PM
