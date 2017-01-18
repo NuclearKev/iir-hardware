@@ -54,7 +54,7 @@
   End: 5:16PM
 
 * Sunday, 1/15/17
-	Start 3:45PM
+	Start: 3:45PM
 
 	I started out by editing a past project so that the Zynq processor will
 	automatically reroute the ADC value to the newly created FIR IP. There are
@@ -81,4 +81,20 @@
 
 	*I can't seem to get another FIR to work yet.*
 
-	END: 6:23PM
+	End: 6:23PM
+
+* Monday, 1/16/17
+	Start: 12:42PM
+
+	I will attempt, once again, to get FIR working. I'll start by making sure the
+	coeffs that I got from MATLAB are correct and do the right filter. (excel)
+
+	- [X] Verified! The coeffs are correct.
+	- [ ] FIR working
+
+	I'm not getting anywhere and it's almost 3... I'm going to create a FSM inside
+	the thing to hopefully help timing related issues that may be problematic.
+
+	Well another waste of 3 hours.
+
+	End: 3:29PM
