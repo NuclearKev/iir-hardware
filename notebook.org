@@ -98,3 +98,71 @@
 	Well another waste of 3 hours.
 
 	End: 3:29PM
+* Tuesday, 1/17/17
+	Start: 12:45PM
+
+	I started to remake the entire project because you can't downgrade to an older
+	version of Vivado...
+
+	End: 1:45PM
+
+	Start: 3:30PM
+
+	Finished up making the new design. I also used a new and improved IP that
+	contained an internal FSM.
+
+	It works with the averager! (with 0x1999 as the all 5 coeffs)
+
+	*Solved: Instead of grabbing 11 downto 0 of the big_output, I took 20*
+	*downto 9.*
+
+	I'm getting stuff out for a real FIR, however, it doesn't seem to be working
+	correctly. What I mean is that the FIR functionality isn't there. I get the
+	correct output frequency but the amplitude doesn't ever cutoff.
+
+	End: 5:30PM
+
+	Start: 8:15PM
+
+	Time to revisit this FIR not functioning correctly issue. I believe it has
+	something to do with the way that I'm doing the calculation. Thus, I am using
+	a for loop to do the calculation, much like how we would do it in C.
+	- My reasoning for this is because of pipelining. Pipelining will allow for
+    higher frequencies. Although I'm not really pipelining for /real/, I'm doing
+    something that will isolation the operations more.
+
+	If this /isn't/ the issue, I'll have to blame it on the coeffs.
+
+	*FAILURE: Using the for loop did NOT fix the issue.*
+
+	I'm going to increase the number of bits of the coeffs. I doubt this will fix
+	the issue, but it's worth a shot!
+
+	If this that isn't the issue then I'm not sure what the problem is... :(
+
+	It's not the issue :(((((( help
+
+	Call police, PETA, CPS, amberlamps! ANYONE!
+
+	Slice range from big_output:
+	27-16: No change in amplitude
+	26-15: No change in amplitude
+	25-14: No change in amplitude
+	24-13: No change in amplitude
+	23-12: Too much voltage, but not clipping. No change in amplitude.
+	22-11: Clipping and hideous. Not a feasible output.
+	...
+	20-9: No feasible output
+
+	*I am unsure as to what the issue is at this point*
+
+	*Problem: No change in amplitude. Even when output should be in cutoff.*
+	- I am getting the correct frequencies out.
+	- The outputs aren't beautiful, however, they are quite nice. (curviture)
+
+	Possible reasons:
+	- Overflowing of big_output variable? NOT THIS ONE (VERIFIED)
+	- big_output not being signed?
+	- try shifting instead of just slicing big_output?
+
+	End: 10:54PM
