@@ -23,12 +23,10 @@ Things to note:
 
 My design:
 - [X] Inputs are /std_logic_vectors/
-- [X] convert them into the /signed/ type and store them into internal registers
-	- [X] Start the coeffs as signed as well
-	- [X] The /data/ array should also be signed, and the input data must be cast
+- [ ] convert them into the /signed/ type and store them into internal registers
+	- [ ] Start the coeffs as signed as well
+	- [ ] The /data/ array should also be signed, and the input data must be cast
     into signed
-	- [ ] If my standard loop doesn't work, try using the multi-array with loop
-    method.
 - [ ] Pipeline the multiplications/additions better
 	- Use temporary array and signals to store values
 	- Maybe use separate processes?

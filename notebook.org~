@@ -166,29 +166,3 @@
 	- try shifting instead of just slicing big_output?
 
 	End: 10:54PM
-* Wednesday, 1/18/17
-	I spent some time today (about 1 hour) looking at a FIR design
-	written in VHDL. It gave me a lot of insight and I have some ideas
-	to fix the issues that I'm having.
-* Thursday, 1/19/17
-	Start: 12:45PM
-
-	I'm starting off by changing the types of the signals and variables
-	in the design.
-	- The ins/outs are still /std_logic_vector/ but the data is converted
-    into /signed/ and the calculations are completed in the type of
-    /signed/. NOTE: Both big_output and the coeffs are now signed as
-    well.
-
-	Changing them to signed didn't work.
-
-	End: 1:45PM
-
-	Start: 3:30PM
-
-	More troubleshooting.
-
-	None of the things that I thought would fix the issue worked.
-
-	I guess I'll have to redesign the entire IP to try and fix this
-	issue.
