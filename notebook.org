@@ -192,3 +192,19 @@
 
 	I guess I'll have to redesign the entire IP to try and fix this
 	issue.
+* Friday, 1/20/17
+	Start: 6:00PM
+
+	We are going to try a new RTL design with a 4 tap summing averager.
+
+	I can't see to get the done signal working with the RTL design, thus, I am
+	going to edit my existing design to use the pipelining features found in the
+	RTL design. I swear that if this doesn't work, I will cry tears of soy. If it
+	does work, I'll cry tears of joy.
+
+	Once again, nothing is working. This project sucks. If only we were acutally
+	taught VHDL...
+
+	Another waste of time.
+
+	End: 9:03PM
