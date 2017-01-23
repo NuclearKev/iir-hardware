@@ -208,3 +208,64 @@
 	Another waste of time.
 
 	End: 9:03PM
+* Sunday, 1/22/17
+	Start: 2:18PM
+
+	Here again.
+
+	I've been trying stuff for about 2 hours and I can't seem to get the done
+	signal to go high :(
+
+	What the hell man. What did I do to deserve this!!!!!
+
+	Note:
+	While attempting to fix the `done' issues, I figured something out. I used a
+	counter as a buffer because the eoc_out signal is very very fast (only 1 cycle
+	high). As a direct result, I noticed (on the ILA) that even though the newly
+	delayed eoc_out signal was on for a very very long time, the IP was still not
+	recognizing the clock. This made me believe that for some reason the signal
+	was being read in incorrectly. Well, this isn't the case either. While
+	thinking of possible issues that may have been causing this issue I decided
+	that maybe, for some reason, the IP couldn't get the rising edge of the
+	delayed eoc_out signal, thus, I removed `rising_edge' logic and replaced it
+	with the simple: "i_clk='1'". To my surprised, Vivado gave me some new
+	warnings about certain signals that were read in (the processes) but not found
+	in the sensitivity list. Interestingly enough, Vivado didn't complain about
+	them not being on the sensitivity list before I changed the clocking
+	logic. Another trait of these signals is that all of which that were warned
+	were found in processes within the logic for the /rising_edge/ of the
+	clock. I'm wondering if this is what is causing my `done' issues. We shall
+	see.
+
+	After testing this theory, I was at a loss of words because it didn't help the
+	issue at all. It seems like the IP isn't responding to the clock at all. I'm
+	going to try switching the IP from RTL to Behavioral. I doubt this means
+	anything but I'm going to test it. If it doesn't do anything, I'm going to go
+	to my project that has a working done signal and attempt to make the necessary
+	changes.
+
+
+	*WHELP FOUND OUT WHAT ONE (1) OF THE PROBLEMS IS..... THE RESET LOGIC WAS SET*
+	*FOR WHEN THE RESET BUTTON WAS LOW.... BUTTONS ARE LOW BY DEFAULT.... BECAUSE*
+	*OF THAT NOTHING COULD BE COMPLETED. LIFE'S BLEAK.*
+
+	Alright, kids here we go:
+	After noticing the reset issue, I tried it and... IT WORKED. The summing
+	average worked! 4 coeffs at 0.2 worked. I decided then to change things that
+	maybe wouldn't have to be there and well... It broke. After fixing it again I
+	realized how to get it working. Turns out, the new data and inputting of the
+	coeffs (found in process p_input) must be done at the /rising_edge/ of the
+	clock but the rest can be done whenever the clock is high. I found that this
+	works best. After realizing this issue, I attempted to try a 3rd order lowpass
+	filter and that worked as well. See the pictures found in the `FIR' directory
+	of this repo.
+
+	NOTE: The coeffs I used for the lowpass filter are: '(0.2119 0.4718 0.4718
+	0.2119).
+
+	NOTE: The filter doesn't work 100% perfect. It is supposed to fully cutoff at
+	35kHz but mine cuts off at about 20kHz. I don't think this is a huge deal
+	mostly becuase we are talking about a 3rd order filter, which wouldn't be very
+	accurate anyways.
+
+	End: 7:28PM (I stayed a little later to work on logic for the Zynq part)
