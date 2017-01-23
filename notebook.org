@@ -269,3 +269,34 @@
 	accurate anyways.
 
 	End: 7:28PM (I stayed a little later to work on logic for the Zynq part)
+* Monday, 1/23/17
+	Start: 1:03PM
+
+	I'm going to test another FIR filter. This time a high pass.
+
+	The high pass coeffs are: '(.013735766 -.688 .687646095 -.013735766)
+	It works! Check out the `fir-highpass' image found in the `fir' directory.
+
+	Very quickly I am going to see if I can get a better amplitude out but
+	shifting the sliced bits in the IP.
+
+	I got a very nice output!
+
+	However, while attempting to create an IIR IP, Vivado decided to delete the
+	source file... Now I have to recreate it...
+
+	The IIR filter will be a 3rd order highpass filter that should cutoff at 10k.
+	The coeffs are (in single section form):
+	a = '(1 -1.76 1.18289 -.27805)
+	b = '(.527624 -1.58287 1.58287 -.527624)
+
+	Seems like the IIR is giving me shit. A lot of it too. Seems like the ouput is
+	too large, this may be because of the addition between the feedforward and
+	feedback. We shall see.
+
+	Turns out that I'm not getting anything out of the DA, we shall look into this
+	later.
+
+	I got my weekly meetnig checked off.
+
+	End: 3:50PM

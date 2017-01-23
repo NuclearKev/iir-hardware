@@ -1,114 +1,171 @@
---------------------------------------------------------------------------------
--- Copyright (C) 2017  Kevin Bloom <kdb5pct.edu>
---
--- This program is free software: you can redistribute it and/or modify it under
--- the terms of the Lesser GNU General Public License as published by the Free
--- Software Foundation, either version 3 of the License, or (at your option) any
--- later version.
---
--- This program is distributed in the hope that it will be useful, but WITHOUT
--- ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS
--- FOR A PARTICULAR PURPOSE.  See the Lesser GNU General Public License for more
--- details.
---
--- You should have received a copy of the Lesser GNU General Public License
--- along with this program.  If not, see <http://www.gnu.org/licenses/>.
---------------------------------------------------------------------------------
---------------------------------------------------------------------------------
--- Description:
---
--- IIR Filter IP
---
---------------------------------------------------------------------------------
+library ieee;
+use ieee.std_logic_1164.all;
+use ieee.numeric_std.all;
 
-library IEEE;
-use IEEE.STD_LOGIC_1164.ALL;
-use IEEE.NUMERIC_STD.ALL;
-use IEEE.STD_LOGIC_SIGNED.ALL;
-
--- As of now, the coefficients will be internally set contstants
 entity iir is
-  Port ( in_clk   : in STD_LOGIC;       --probably should be a fast non-fs clock
-         data_in  : in STD_LOGIC_VECTOR  (11 downto 0);
-         data_out : out STD_LOGIC_VECTOR (11 downto 0));
+  port (
+    i_clk    : in  std_logic;
+    i_rstb   : in  std_logic;
+--    ready        : in  std_logic;
+    done     : out std_logic;
+    -- coefficient
+    i_b_0    : in  std_logic_vector(14 downto 0);
+    i_b_1    : in  std_logic_vector(14 downto 0);
+    i_b_2    : in  std_logic_vector(14 downto 0);
+    i_b_3    : in  std_logic_vector(14 downto 0);
+    i_a_1    : in  std_logic_vector(14 downto 0);
+    i_a_2    : in  std_logic_vector(14 downto 0);
+    i_a_3    : in  std_logic_vector(14 downto 0);
+    -- data input
+    i_data   : in  std_logic_vector(11 downto 0);
+    -- filtered data
+    o_data   : out std_logic_vector(11 downto 0));
 end iir;
 
 architecture Behavioral of iir is
 
-  signal fir_out : STD_LOGIC_VECTOR(11 downto 0);
+  type t_data_pipe      is array (0 to 3) of signed(11  downto 0);
+  type t_fdata_pipe     is array (0 to 3) of signed(11  downto 0);
+  type t_bcoeff         is array (0 to 3) of signed(14  downto 0);
+  type t_acoeff         is array (0 to 3) of signed(14  downto 0);    
 
-  -- Defining of the coefficient arrays
-  type a_int is array (4 downto 0) of STD_LOGIC_VECTOR(11 downto 0);
-  -- type a_elem is array (8 downto 0) of a;
-  -- type b is array (14 downto 0) of integer;
-  -- type b_elem is array (9 downto 0) of b;
-  -- signal a_coeff : a_elem;
-  -- signal b_coeff : b_elem;
+  type t_mult           is array (0 to 3) of signed(26    downto 0);
+  type t_fmult          is array (0 to 3) of signed(26    downto 0);
+  type t_add_st0        is array (0 to 1) of signed(26+1  downto 0);
+  type t_fadd_st0       is array (0 to 1) of signed(26+1  downto 0);
 
-  signal a : a_int := (
-    0 => x"1999",
-    1 => x"1999",
-    2 => x"1999",
-    3 => x"1999",
-    4 => x"1999",
-    others => x"1999");
-
-  -- Data array
-  type data_array is array (4 downto 0) of STD_LOGIC_VECTOR(11 downto 0);
-  -- type data_elem is array (9 downto 0) of data_array;
-  signal data : data_array := (
-    0 => x"5",
-    1 => x"4",
-    2 => x"3",
-    3 => x"2",
-    4 => x"1",
-    others => x"0");
+  signal r_bcoeff       : t_bcoeff;
+  signal r_acoeff       : t_acoeff;
+  signal p_data         : t_data_pipe;
+  signal p_fdata        : t_fdata_pipe;
+  signal r_mult         : t_mult;
+  signal r_fmult        : t_fmult;
+  signal r_add_st0      : t_add_st0;
+  signal r_fadd_st0     : t_fadd_st0;
+  signal r_add_st1      : signed(26+2  downto 0);
+  signal r_fadd_st1     : signed(26+2  downto 0);
+  signal r_final_sum    : signed(26+3  downto 0);
 
 begin
 
-  data_out <= fir_out;
+--- Data input ---
 
-  -- Assigning the coefficient values
-  -- a_coeff <= ( 2, 2, 2, 2, 2, 2, 2, 2, 2 );
-  -- b_coeff <= ( 2, 2, 2, 2, 2, 2, 2, 2, 2, 2 );
-
-  -- Initialize data array to zeros
-  -- data <= ( x"0009", x"0008", x"0007", x"0006", x"0005", x"0004", x"0003",
-  --          x"0002", x"0001", x"0000" );
-
-  fir: process(in_clk,data)
-    
-  variable i : integer := 0;
-  variable big_output : STD_LOGIC_VECTOR(23 downto 0);
-  
+  p_input : process (i_rstb,i_clk)
   begin
-    
-    -- variable buf : integer := 0;        -- Declare loop variable here
-    if(rising_edge(in_clk)) then
-
-      -- Shift the data array and feed in the new data      
-      for i in 0 to 3 loop
-        data(i+1) <= data(i);
-      end loop;
-      data(0) <= data_in;
-
-      big_output := data(0)*a(0) + data(1)*a(1) + data(2)*a(2) + data(3)*a(3) +
-                 data(4)*a(4);
-      
-      fir_out <= big_output(11 downto 0);                
-
+    if(i_rstb='1') then
+      p_data       <= (others=>(others=>'0'));
+      r_bcoeff     <= (others=>(others=>'0'));
+      r_acoeff     <= (others=>(others=>'0'));
+    elsif(rising_edge(i_clk)) then
+      p_data       <= signed(i_data)&p_data(0 to p_data'length-2);
+      r_bcoeff(0)  <= signed(i_b_0);
+      r_bcoeff(1)  <= signed(i_b_1);
+      r_bcoeff(2)  <= signed(i_b_2);
+      r_bcoeff(3)  <= signed(i_b_3);
+      r_acoeff(0)  <= signed(i_a_1);
+      r_acoeff(1)  <= signed(i_a_2);
+      r_acoeff(2)  <= signed(i_a_3);
+--      r_acoeff(3)  <= signed(i_a_4);
     end if;
-    -- Right shift the data array here
+  end process p_input;
 
-    -- for i in 0 to 9 loop
-    --   case i is
-    --     when 0 => temp1 <= a*data;
-    --     when 1 => temp2 <= temp1*b;
-    --     when 2 => result <= temp2*c;
-    --     when others => null;
-    --   end case;
-    -- end loop;
+--- Feedforward ---
 
-  end process fir;
+  p_mult : process (i_rstb,i_clk,p_data,r_bcoeff)
+  begin
+    if(i_rstb='1') then
+      r_mult       <= (others=>(others=>'0'));
+    elsif(i_clk='1') then
+      for k in 0 to 3 loop
+        r_mult(k)       <= p_data(k) * r_bcoeff(k);
+      end loop;
+    end if;
+  end process p_mult;
 
+  p_add_st0 : process (i_rstb,i_clk,r_mult)
+  begin
+    if(i_rstb='1') then
+      r_add_st0     <= (others=>(others=>'0'));
+    elsif(i_clk='1') then
+      for k in 0 to 1 loop
+        r_add_st0(k)     <= resize(r_mult(2*k),28)  + resize(r_mult(2*k+1),28);
+      end loop;
+    end if;
+  end process p_add_st0;
+
+  p_add_st1 : process (i_rstb,i_clk,r_add_st0)
+  begin
+    if(i_rstb='1') then
+      r_add_st1     <= (others=>'0');
+    elsif(i_clk='1') then
+      r_add_st1     <= resize(r_add_st0(0),29)  + resize(r_add_st0(1),29);
+    end if;
+  end process p_add_st1;
+
+--- Feedback ---
+
+  p_fmult : process (i_rstb,i_clk,p_fdata,r_acoeff)
+  begin
+    if(i_rstb='1') then
+      r_fmult       <= (others=>(others=>'0'));
+    elsif(i_clk='1') then
+      for k in 0 to 3 loop
+        r_fmult(k)       <= p_fdata(k) * r_acoeff(k);
+      end loop;
+    end if;
+  end process p_fmult;
+
+  p_fadd_st0 : process (i_rstb,i_clk,r_fmult)
+  begin
+    if(i_rstb='1') then
+      r_fadd_st0     <= (others=>(others=>'0'));
+    elsif(i_clk='1') then
+      for k in 0 to 1 loop
+        r_fadd_st0(k)     <= resize(r_fmult(2*k),28)  + resize(r_fmult(2*k+1),28);
+      end loop;
+    end if;
+  end process p_fadd_st0;
+
+  p_fadd_st1 : process (i_rstb,i_clk,r_fadd_st0)
+  begin
+    if(i_rstb='1') then
+      r_fadd_st1     <= (others=>'0');
+    elsif(i_clk='1') then
+      r_fadd_st1     <= resize(r_fadd_st0(0),29)  + resize(r_fadd_st0(1),29);
+    end if;
+  end process p_fadd_st1;
+
+  p_final_sum : process (i_rstb,i_clk,r_add_st1,r_fadd_st1)
+  begin
+    if(i_rstb='1') then
+      r_final_sum     <= (others=>'0');
+    elsif(i_clk='1') then
+      r_final_sum     <= resize(r_add_st1,30) - resize(r_fadd_st1,30);
+    end if;
+  end process p_final_sum;
+
+  p_output : process (i_rstb,i_clk,r_final_sum,p_fdata)
+  variable out_buf : signed(11 downto 0);
+  begin
+    done <= '0';
+    if(i_rstb='1') then
+      o_data   <= (others=>'0');
+      p_fdata  <= (others=>(others=>'0'));
+      done <= '0';
+    elsif(i_clk='1') then
+      done    <= '1';
+      out_buf := r_final_sum(28 downto 17);
+      o_data  <= std_logic_vector(out_buf);
+      p_fdata <= out_buf & p_fdata(0 to p_fdata'length-2);
+    end if;
+  end process p_output;
+
+--  p_done : process (i_rstb, i_clk)
+--  begin
+--    if(i_rstb='0') then
+--      done <= '0';    
+--    elsif(rising_edge(i_clk)) then
+--       done <= '1';
+--    end if;
+--  end process p_done;
 end Behavioral;
