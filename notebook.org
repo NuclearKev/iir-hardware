@@ -300,3 +300,50 @@
 	I got my weekly meetnig checked off.
 
 	End: 3:50PM
+* Tuesday. 1/24/17
+	CLOCK: [2017-01-24 Tue 11:54]--[2017-01-24 Tue 13:42] =>  1:48
+	Just learned about the timeclock feature in org-mode... This is awesome.
+
+	Today I am going to see if I can figure out why I get no output with the IIR
+	IP.
+
+	I'm not quite sure what is causing this problem, however, I'm trying a bunch
+	of different things that /may/ be related to the issue. So far Ive:
+	- Removed 3 processes because you can do the feedback and feedforward
+    calculations in the same process.
+		- This changed *nothing* in the elaborated design. Thus, it meant nothing
+      except less LOC.
+	- Changed the `out_buf' variable to a signal.
+		- This also made no difference.
+	- I replaced which process the new feeback data is placed. My reasoning for
+    this is because it would trigger the second process (p_add_st0) immediately
+    after the data is shipped out; causing an endless loop where the new input
+    data (from the XADC) would never be read.
+		- This actually worked!!! I think I'm getting the hang of this hardware
+      design thing.
+
+	NOTE: In the `iir' directory there will be screenshots of the IIR outputs from
+	the network analyzer. The `iir-highpass-test1.png' file is the first working
+	IIR. It isn't exactly right so I'm considering it a test.
+
+	CLOCK: [2017-01-24 Tue 15:42]--[2017-01-24 Tue 16:55] =>  1:13
+
+	Yay, I got a much better output this time. The issue from before was that the
+	coeffs weren't in range for a 15 bit signed number, thus, Vivado was
+	truncating the values. To fix this I just adjusted the coeffs respectively.
+
+	I'm going to try and make a notching filter with a bandwidth of 10k (3rd
+	order).
+
+	It's not beautiful and doesn't really act correctly, but it does have
+	notch-like features that are almost right. I dunno. Good enough.
+
+	Let us think about how we are going to make things more generic.
+	- Changing the order will pick how many coeffs will be fed in (just think
+    hardware right now, no zynq yet)
+	- Have the maximum number of possibilies laid out BEFORE you mess with trying
+    inbetween values.
+		- Keep in mind, before we get Zynq support, the sythesizer will remove
+      unused registers. However, once the Zynq is involved, it /should/ work
+      out.
+	- Make sure you don't have overflows. :))
