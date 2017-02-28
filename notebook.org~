@@ -373,33 +373,3 @@
 	Congratulations! I can make a 16 coeff IP :D
 
 	That is all for today.
-* Monday, 2/27/17
-	CLOCK: [2017-02-27 Mon 18:12]--[2017-02-27 Mon 21:29] =>  3:17
-
-	It's time to test out 16 coeff (15th order) transferring.
-
-
-	My first try was a lowpass filter that cuts off at 20k, it kind of works but
-	doesn't really pass inspection.
-
-	New bug: When creating a single section the a coeffs are way too large. Looks
-	like I'm going to have to do this the hard way -- second order sections...
-
-	So I've got most of the logic down to allow for 8 second stage calculations,
-	that equates to a 15th order filter, just like I wanted.
-
-	I wrote most of the IP however, I'm out of time for tonight. The parts that I
-	wrote synthesized and implemented, which means I haven't gone over the
-	internal limit of signals. (a concern of mine)
-
-	In theory, this should allow you to make any filter that is 15th order or
-	below and does the calculations using 8 (or less) second stage filters. Right
-	now I don't have the gains in there but if I about the right output, then I'll
-	be happy and add that in.
-
-	This concept isn't game over if it doesn't work either!
-	- The next idea will be having second order IP that are cascaded, if you wish
-    to do a smaller filter (or a bigger one), you can either add more
-    (re-synthesize needed) or set the coeffs to zero.
-	- At this point, my new idea seems doable, but we will actually find out later
-    this week.
