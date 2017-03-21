@@ -459,3 +459,32 @@
 
 	Next time, I'm going to work on getting cascading 2nd Order Filters
 	working.
+* Monday, 3/20/17
+	CLOCK: [2017-03-20 Mon 18:22]--[2017-03-20 Mon 20:42] =>  2:20
+
+	It is time to test out my new multi-stage design.
+
+	I created 2 new IPs tonight:
+	- dmux
+		- A de-multiplexer for the coeff_clk. This allows me to select which IP gets
+      loaded by toggling which one gets the coeff_clk.
+	- mux
+		- A multiplexer for the outputs. If you wish to create a smaller filter, you
+      can select which stage you want the output to come from. For example, if
+      you only wanted a 2 staged 4th order filter, you would select stage 1 as
+      the output.
+
+
+	To my surprise, it worked. It's not pretty and looks like the output was
+	smaller than it should be. I will attempt to make that look better at a later
+	date. See the generic-staged-iir directory in this repo for pictures of the
+	semi-working filters.
+
+	Notes:
+	- The output was smaller than what it should be.
+		- This could be because of the slicing (or part of the next note).
+	- The output of stage 0 was better than stage 1.
+		- This could mean that the outputs are getting smaller and smaller. This
+      will be tested once I add more stages. A possible fix would be to have the
+      inputs of the filters be 32 bit and pass the entire 32 bit output
+      values. I would have to use a resize on stage 0. We shall see.
