@@ -488,3 +488,45 @@
       will be tested once I add more stages. A possible fix would be to have the
       inputs of the filters be 32 bit and pass the entire 32 bit output
       values. I would have to use a resize on stage 0. We shall see.
+* Tuesday, 3/21/17
+	CLOCK: [2017-03-21 Tue 18:12]--[2017-03-21 Tue 21:40] =>  3:28
+
+	I'm going to attempt to fix 1 of the bugs mentioned at the end. Specifically
+	the bug regarding the small output.
+
+	I'm going to first switch Fs to 8kHz. This may help with the impurity at the
+	end (high freqs) of the filters. Next, I'm just going to increase the slice
+	MSB.
+
+	Well, increasing slice MSB worked sort of. It's still too low. This makes me
+	think that it's the probably regarding the stages making the output too
+	small[1]. Also, regarding the impurity at the end: The fix is to just stay away
+	from Fs/2. About 1-2 div before Fs/2, you will see some impurity. I'm not
+	entirely sure why but even with 8kHz = Fs, it has the impurity around 1-2
+	div before Fs/2. I'm going to set it back to 100kHz and just look at <10kHz
+	and see what it looks like. After I test that and get some results, I will
+	attempt to add more stages and see what happens.
+
+	Looks like something went majorly wrong beacuse I'm not getting any good
+	output. The amplitude is completely off and very small. I need to revaluate
+	the slices.
+
+	# 1 hour break
+
+	My first test with all of the stages will be a simple high pass filter that
+	cuts off between 1k and 2k with an Fs of 100k. It has all 8 sections so we
+	will see what happens.
+
+
+	Well, it didn't work. I can only get an output at stage 1. There is also a
+	critial warning about how some of the inputs to the mux are not
+	connected. This makes me think there is some issue with most of the IIR
+	IPs. Even though i_6 and i_7 are not on the list, they would be getting no
+	data input into them. I checked the elaborated design and didn't see anything
+	that was misplaced. I will have to troubleshoot this I guess.
+
+
+
+[1] Stage 0 had about the same output amplitude as stage 1 in the 8k test. In
+fact, strage 1 actually had a /better/ output than stage 0 in terms of
+smoothness and consistance. The amplitude really didn't change.
