@@ -530,3 +530,30 @@
 [1] Stage 0 had about the same output amplitude as stage 1 in the 8k test. In
 fact, strage 1 actually had a /better/ output than stage 0 in terms of
 smoothness and consistance. The amplitude really didn't change.
+* Thursday, 2/23/17
+	CLOCK: [2017-03-23 Thu 20:47]
+
+	I'm going to attempt to fix some of these bugs.
+
+	Firstly, the critial warning about un-sourced pins went away by itself.
+	Secondly, no matter what I put into the IPs, I get a very shitty highpass
+	filter that cutoff somewhere around 20k. I have no idea. I'm going to go back
+	to a 2 stage and see if I can get that to work. Then i will slowly increase
+	the number of stages.
+
+	Turns out that after stage 0, you get that 20k highpass bug. This might have
+	to do with the done signal, since that is the only difference.
+
+
+	I switched the clock on stage 1 to use the same clock as stage 0 and I'm
+	getting lowpass functionality, however, highpass doesn't seem to be
+	working. This could just be beacuse of the output being very very small
+	(-50dB). Thatis going to be the next bug I tackle because I cannot go any
+	further without having that fixed.
+
+
+	Here's the deal. I've created a resize IP to resize the XADC output to 32
+	bits. This way the IIR IPs can use 32 bit for everything. This /should/ remove
+	the small values. The output will then be sliced to the 12 bit value,
+	somewhere around 28-15. I have the resize IP created (not tested) and am
+	waiting until Sunday to work on the refactor of IIR IP.

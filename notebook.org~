@@ -373,3 +373,160 @@
 	Congratulations! I can make a 16 coeff IP :D
 
 	That is all for today.
+* Monday, 2/27/17
+	CLOCK: [2017-02-27 Mon 18:12]--[2017-02-27 Mon 21:29] =>  3:17
+
+	It's time to test out 16 coeff (15th order) transferring.
+
+
+	My first try was a lowpass filter that cuts off at 20k, it kind of works but
+	doesn't really pass inspection.
+
+	New bug: When creating a single section the a coeffs are way too large. Looks
+	like I'm going to have to do this the hard way -- second order sections...
+
+	So I've got most of the logic down to allow for 8 second stage calculations,
+	that equates to a 15th order filter, just like I wanted.
+
+	I wrote most of the IP however, I'm out of time for tonight. The parts that I
+	wrote synthesized and implemented, which means I haven't gone over the
+	internal limit of signals. (a concern of mine)
+
+	In theory, this should allow you to make any filter that is 15th order or
+	below and does the calculations using 8 (or less) second stage filters. Right
+	now I don't have the gains in there but if I about the right output, then I'll
+	be happy and add that in.
+
+	This concept isn't game over if it doesn't work either!
+	- The next idea will be having second order IP that are cascaded, if you wish
+    to do a smaller filter (or a bigger one), you can either add more
+    (re-synthesize needed) or set the coeffs to zero.
+	- At this point, my new idea seems doable, but we will actually find out later
+    this week.
+* Tuesday, 2/28/17
+	CLOCK: [2017-02-28 Tue 19:05]--[2017-02-28 Tue 21:54] =>  2:49
+
+	Time to see if I can get this multi-staged filter IP working.
+
+	Possible Bugs:
+	- The shifting of the data arrays goes the wrong way.
+		- This would mean the calculations would be done backwards. This
+      would be fine if we had symmeteric coeff arrays, however, 2nd
+      second does not.
+		- This would have to do with the
+     	r_s0_data <= resize(r_out_data(0), 12)&r_s0_data(0 to r_s0_data'length-2);
+			part.
+	- The design flat out doesn't work
+		- This is probably the most likely of all the possible bugs.
+		- Since all the stages are calculated "at the same time," we might
+      run into issues there. However, we might be okay and just have a
+      delay that is/isn't noticable.
+	- The slicing of internal data regesters isn't correct.
+		- Sadly, there isn't a good way to do this so if this is a major
+      issue, there really isn't a good solution that I can think of.
+		- Using `resize' doesn't work either, I've already had a bug using
+      that function. The resize function simply takes the sign bit and
+      tacks it onto the front of the *least significant bits*. This
+      means you'll never see anything.
+		- I believe that slicing from 26 downto 15 is a good spot,
+      however, it may become an issue.
+	- If you wish to use a filter that uses less than 8 sections, you
+    won't get the output you wish.
+		- My theorectical fix to this issue is to use an input signal that
+      tells the IP which internal data regester to output.
+		- Hopefully, it will use a mux to figure that out, if not, I'm
+      afraid we are at a standstill. If this bug exists, this entire
+      concept must be rethought or throw away.
+
+	My first attempt at using this new design was a failure. However, I
+	found 2 bugs in the code:
+	1. The b coeff loop had an incorrect signal, however, it really
+     didn't cause any problems
+	2. I was using the `resize' function to resize the internal data
+     arrays. I believe this is way I was always getting nothing out.
+		 1. The `resize' functions slices the *rightmost* bits and tacks
+        on the sign bit. This means that when I was attempting to
+        resize to 12 bits, I was getting very small (or basically
+        zero) values being shifted in to the main data
+        regesters. Obviously, I would be seeing nothing output if that
+        were the case!
+		 2. UPDATE: This was /not/ the problem.
+
+
+	Well I think I'm going to label this as a dead end. I'm going to
+	think about other possibilies but I'm not sure if I will be able to
+	get this concept to work.
+
+	Next time, I'm going to work on getting cascading 2nd Order Filters
+	working.
+* Monday, 3/20/17
+	CLOCK: [2017-03-20 Mon 18:22]--[2017-03-20 Mon 20:42] =>  2:20
+
+	It is time to test out my new multi-stage design.
+
+	I created 2 new IPs tonight:
+	- dmux
+		- A de-multiplexer for the coeff_clk. This allows me to select which IP gets
+      loaded by toggling which one gets the coeff_clk.
+	- mux
+		- A multiplexer for the outputs. If you wish to create a smaller filter, you
+      can select which stage you want the output to come from. For example, if
+      you only wanted a 2 staged 4th order filter, you would select stage 1 as
+      the output.
+
+
+	To my surprise, it worked. It's not pretty and looks like the output was
+	smaller than it should be. I will attempt to make that look better at a later
+	date. See the generic-staged-iir directory in this repo for pictures of the
+	semi-working filters.
+
+	Notes:
+	- The output was smaller than what it should be.
+		- This could be because of the slicing (or part of the next note).
+	- The output of stage 0 was better than stage 1.
+		- This could mean that the outputs are getting smaller and smaller. This
+      will be tested once I add more stages. A possible fix would be to have the
+      inputs of the filters be 32 bit and pass the entire 32 bit output
+      values. I would have to use a resize on stage 0. We shall see.
+* Tuesday, 3/21/17
+	CLOCK: [2017-03-21 Tue 18:12]--[2017-03-21 Tue 21:40] =>  3:28
+
+	I'm going to attempt to fix 1 of the bugs mentioned at the end. Specifically
+	the bug regarding the small output.
+
+	I'm going to first switch Fs to 8kHz. This may help with the impurity at the
+	end (high freqs) of the filters. Next, I'm just going to increase the slice
+	MSB.
+
+	Well, increasing slice MSB worked sort of. It's still too low. This makes me
+	think that it's the probably regarding the stages making the output too
+	small[1]. Also, regarding the impurity at the end: The fix is to just stay away
+	from Fs/2. About 1-2 div before Fs/2, you will see some impurity. I'm not
+	entirely sure why but even with 8kHz = Fs, it has the impurity around 1-2
+	div before Fs/2. I'm going to set it back to 100kHz and just look at <10kHz
+	and see what it looks like. After I test that and get some results, I will
+	attempt to add more stages and see what happens.
+
+	Looks like something went majorly wrong beacuse I'm not getting any good
+	output. The amplitude is completely off and very small. I need to revaluate
+	the slices.
+
+	# 1 hour break
+
+	My first test with all of the stages will be a simple high pass filter that
+	cuts off between 1k and 2k with an Fs of 100k. It has all 8 sections so we
+	will see what happens.
+
+
+	Well, it didn't work. I can only get an output at stage 1. There is also a
+	critial warning about how some of the inputs to the mux are not
+	connected. This makes me think there is some issue with most of the IIR
+	IPs. Even though i_6 and i_7 are not on the list, they would be getting no
+	data input into them. I checked the elaborated design and didn't see anything
+	that was misplaced. I will have to troubleshoot this I guess.
+
+
+
+[1] Stage 0 had about the same output amplitude as stage 1 in the 8k test. In
+fact, strage 1 actually had a /better/ output than stage 0 in terms of
+smoothness and consistance. The amplitude really didn't change.
