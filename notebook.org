@@ -559,7 +559,7 @@ smoothness and consistance. The amplitude really didn't change.
 	waiting until Sunday to work on the refactor of IIR IP.
 
 * Sunday, 3/26/27
-	CLOCK: [2017-03-26 Sun 20:04]
+	CLOCK: [2017-03-26 Sun 20:04]--[2017-03-26 Sun 23:23] =>  3:19
 
 	Time to try to fix some stuff.
 
@@ -573,3 +573,9 @@ smoothness and consistance. The amplitude really didn't change.
 
 
 	That is all for tonight. Asa-la-pasta
+* Monday, 3/27/17
+	CLOCK: [2017-03-27 Mon 18:05]--[2017-03-27 Mon 19:54] =>  1:49
+
+	More troubleshooting!!
+
+	I don't know what is wrong.
