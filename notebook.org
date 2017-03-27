@@ -530,8 +530,8 @@
 [1] Stage 0 had about the same output amplitude as stage 1 in the 8k test. In
 fact, strage 1 actually had a /better/ output than stage 0 in terms of
 smoothness and consistance. The amplitude really didn't change.
-* Thursday, 2/23/17
-	CLOCK: [2017-03-23 Thu 20:47]
+* Thursday, 3/23/17
+	CLOCK: [2017-03-23 Thu 20:47]--[2017-03-23 Thu 22:31] =>  1:44
 
 	I'm going to attempt to fix some of these bugs.
 
@@ -548,7 +548,7 @@ smoothness and consistance. The amplitude really didn't change.
 	I switched the clock on stage 1 to use the same clock as stage 0 and I'm
 	getting lowpass functionality, however, highpass doesn't seem to be
 	working. This could just be beacuse of the output being very very small
-	(-50dB). Thatis going to be the next bug I tackle because I cannot go any
+	(-50dB). That is going to be the next bug I tackle because I cannot go any
 	further without having that fixed.
 
 
@@ -557,3 +557,19 @@ smoothness and consistance. The amplitude really didn't change.
 	the small values. The output will then be sliced to the 12 bit value,
 	somewhere around 28-15. I have the resize IP created (not tested) and am
 	waiting until Sunday to work on the refactor of IIR IP.
+
+* Sunday, 3/26/27
+	CLOCK: [2017-03-26 Sun 20:04]
+
+	Time to try to fix some stuff.
+
+	So I finally got a decent voltage coming out! However, I still cannot get the
+	filters to act how they should. I'm stuck getting a highpass filter
+	everytime. Here are some possible problems:
+	- Using `done' as the clock for the next doesn't work.
+	- Using the same clock for them all doesn't work
+	- 32 bit is too small for the numbers being calculated
+	- The gains are missing
+
+
+	That is all for tonight. Asa-la-pasta
