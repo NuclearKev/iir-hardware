@@ -579,3 +579,21 @@ smoothness and consistance. The amplitude really didn't change.
 	More troubleshooting!!
 
 	I don't know what is wrong.
+* Tuesday, 2/28/17
+	CLOCK: [2017-03-28 Tue 15:41]--[2017-03-28 Tue 23:23] =>  7:42
+
+	Working on the bugs.
+
+	Turns out the multistage is what causes the problem, stuff works to some
+	degree if I use a single stage.
+
+
+	That's all I figured out after 7 hours...
+* Thursday, 3/30/17
+	CLOCK: [2017-03-30 Thu 15:10]--[2017-03-30 Thu 18:24] =>  3:14
+
+	I tried some more stuff and finally got something working.
+
+	I swithced the IP to use 32 bit values and I am getting a good output now.
+	The lowpass seems to work alright (even with sectioned coeffs) but I can't
+	seem to get highpass. At least I have one bug "fixed."

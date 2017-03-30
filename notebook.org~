@@ -559,7 +559,7 @@ smoothness and consistance. The amplitude really didn't change.
 	waiting until Sunday to work on the refactor of IIR IP.
 
 * Sunday, 3/26/27
-	CLOCK: [2017-03-26 Sun 20:04]
+	CLOCK: [2017-03-26 Sun 20:04]--[2017-03-26 Sun 23:23] =>  3:19
 
 	Time to try to fix some stuff.
 
@@ -573,3 +573,19 @@ smoothness and consistance. The amplitude really didn't change.
 
 
 	That is all for tonight. Asa-la-pasta
+* Monday, 3/27/17
+	CLOCK: [2017-03-27 Mon 18:05]--[2017-03-27 Mon 19:54] =>  1:49
+
+	More troubleshooting!!
+
+	I don't know what is wrong.
+* Tuesday, 2/28/17
+	CLOCK: [2017-03-28 Tue 15:41]--[2017-03-28 Tue 23:23] =>  7:42
+
+	Working on the bugs.
+
+	Turns out the multistage is what causes the problem, stuff works to some
+	degree if I use a single stage.
+
+
+	That's all I figured out after 7 hours...
