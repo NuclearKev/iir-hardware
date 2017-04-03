@@ -597,3 +597,22 @@ smoothness and consistance. The amplitude really didn't change.
 	I swithced the IP to use 32 bit values and I am getting a good output now.
 	The lowpass seems to work alright (even with sectioned coeffs) but I can't
 	seem to get highpass. At least I have one bug "fixed."
+* Sunday, 4/2/17
+	CLOCK: [2017-04-02 Sun 17:51]--[2017-04-02 Sun 21:41] =>  3:50
+
+	Going to keep trying to fix those bugs.
+
+	Turns out that using the multi-section coeffs causes some odd behavior and
+	makes a strange notch-like filter. It works for the most part, however. The
+	single sections coeffs aren't too bad but still aren't perfect. I'm going to
+	make a mulit-section design and see how it works with multiple sections.
+
+
+	Well the multi-sections kind of works, but it is stuck at 1k for
+	cutoff. Whether it is high or low pass, it's gonna cut off at 1k. More or
+	less the same as before.
+
+
+	I've got it kind of working with the gains put in. It isn't good enough to
+	screenshot yet. However, I think I can fine tune it to work. We shall try
+	tomorrow.
