@@ -616,3 +616,23 @@ smoothness and consistance. The amplitude really didn't change.
 	I've got it kind of working with the gains put in. It isn't good enough to
 	screenshot yet. However, I think I can fine tune it to work. We shall try
 	tomorrow.
+* Monday, 4/3/17
+	CLOCK: [2017-04-03 Mon 17:47]--[2017-04-03 Mon 22:15] =>  4:28
+
+	Feedback slice:
+	- 43:28
+		- Very little output
+	- 46:31
+		- Too big
+	- 45:30
+		- Gay
+	- 44:29
+		- waste of time
+
+
+	Well, I attempted something different. I made a different design that didn't
+	have the mux involved. I actually got a fairly good output for the lowpass,
+	however, with the same old shit. I could only get 1 lowpass and highpass was
+	shit. I still have no idea what is wrong with this... Maybe one day.
+
+	Go into the 2-stage-no-mux dir to see the outputs that I have so far.
