@@ -636,3 +636,15 @@ smoothness and consistance. The amplitude really didn't change.
 	shit. I still have no idea what is wrong with this... Maybe one day.
 
 	Go into the 2-stage-no-mux dir to see the outputs that I have so far.
+* Tuesday, 4/4/17
+	CLOCK: [2017-04-04 Tue 15:36]--[2017-04-04 Tue 21:46] =>  6:10
+
+	I kept trying and I ended up getting a really nice lowpass. However, it was
+	stuck with a cutoff of 5k-8k. It would change slightly each new set of coeffs,
+	but would remain in that range. The high pass is still fucked up. Just
+	completely screwed up. I still have no idea what the problem is.
+
+
+	There are some new screenshots in the root directory. They are from today. You
+	can see the 2 typical forms of the highpass and lowpass filters. Quite ugly
+	and stupid.
