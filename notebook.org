@@ -648,3 +648,9 @@ smoothness and consistance. The amplitude really didn't change.
 	There are some new screenshots in the root directory. They are from today. You
 	can see the 2 typical forms of the highpass and lowpass filters. Quite ugly
 	and stupid.
+* Thursday, 4/6/17
+	CLOCK: [2017-04-06 Thu 15:42]--[2017-04-06 Thu 19:51] =>  4:09
+
+	I attempted to create a just-hardware version of the project but it wouldn't
+	let me due to going over 100 IO ports. I don't know how I made it before
+	without having that issue. Whatever. Back to the drawing board.
