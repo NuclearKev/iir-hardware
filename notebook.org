@@ -665,3 +665,19 @@ smoothness and consistance. The amplitude really didn't change.
 	screenshot though...
 
 	Hopefully one of these methods will save me!!!!!
+* Tuesday, 4/11/17
+	CLOCK: [2017-04-11 Tue 14:10]--[2017-04-11 Tue 18:05] =>  3:55
+
+	I found out more about scaling and I feel like that might be what is wrong,
+	although, I'm not entirely sure. I also found a document that explains it all
+	fairly well, EXCEPT, it doesn't really explain where the scale constants come
+	from. If I can figure that out, I might be good.
+
+
+	Also, I'm stuck with high pass right now. That's while trying to use there
+	different scaled values. There may be a reliationship between these problems:
+	- higher coeffs = low pass
+	- smaller coeffs = high pass
+
+
+	If I can break that spell, I'll be okay!
