@@ -589,3 +589,68 @@ smoothness and consistance. The amplitude really didn't change.
 
 
 	That's all I figured out after 7 hours...
+* Thursday, 3/30/17
+	CLOCK: [2017-03-30 Thu 15:10]--[2017-03-30 Thu 18:24] =>  3:14
+
+	I tried some more stuff and finally got something working.
+
+	I swithced the IP to use 32 bit values and I am getting a good output now.
+	The lowpass seems to work alright (even with sectioned coeffs) but I can't
+	seem to get highpass. At least I have one bug "fixed."
+* Sunday, 4/2/17
+	CLOCK: [2017-04-02 Sun 17:51]--[2017-04-02 Sun 21:41] =>  3:50
+
+	Going to keep trying to fix those bugs.
+
+	Turns out that using the multi-section coeffs causes some odd behavior and
+	makes a strange notch-like filter. It works for the most part, however. The
+	single sections coeffs aren't too bad but still aren't perfect. I'm going to
+	make a mulit-section design and see how it works with multiple sections.
+
+
+	Well the multi-sections kind of works, but it is stuck at 1k for
+	cutoff. Whether it is high or low pass, it's gonna cut off at 1k. More or
+	less the same as before.
+
+
+	I've got it kind of working with the gains put in. It isn't good enough to
+	screenshot yet. However, I think I can fine tune it to work. We shall try
+	tomorrow.
+* Monday, 4/3/17
+	CLOCK: [2017-04-03 Mon 17:47]--[2017-04-03 Mon 22:15] =>  4:28
+
+	Feedback slice:
+	- 43:28
+		- Very little output
+	- 46:31
+		- Too big
+	- 45:30
+		- Gay
+	- 44:29
+		- waste of time
+
+
+	Well, I attempted something different. I made a different design that didn't
+	have the mux involved. I actually got a fairly good output for the lowpass,
+	however, with the same old shit. I could only get 1 lowpass and highpass was
+	shit. I still have no idea what is wrong with this... Maybe one day.
+
+	Go into the 2-stage-no-mux dir to see the outputs that I have so far.
+* Tuesday, 4/4/17
+	CLOCK: [2017-04-04 Tue 15:36]--[2017-04-04 Tue 21:46] =>  6:10
+
+	I kept trying and I ended up getting a really nice lowpass. However, it was
+	stuck with a cutoff of 5k-8k. It would change slightly each new set of coeffs,
+	but would remain in that range. The high pass is still fucked up. Just
+	completely screwed up. I still have no idea what the problem is.
+
+
+	There are some new screenshots in the root directory. They are from today. You
+	can see the 2 typical forms of the highpass and lowpass filters. Quite ugly
+	and stupid.
+* Thursday, 4/6/17
+	CLOCK: [2017-04-06 Thu 15:42]--[2017-04-06 Thu 19:51] =>  4:09
+
+	I attempted to create a just-hardware version of the project but it wouldn't
+	let me due to going over 100 IO ports. I don't know how I made it before
+	without having that issue. Whatever. Back to the drawing board.

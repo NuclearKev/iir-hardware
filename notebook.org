@@ -654,3 +654,14 @@ smoothness and consistance. The amplitude really didn't change.
 	I attempted to create a just-hardware version of the project but it wouldn't
 	let me due to going over 100 IO ports. I don't know how I made it before
 	without having that issue. Whatever. Back to the drawing board.
+* Monday, 4/10/17
+	CLOCK: [2017-04-10 Mon 18:47]--[2017-04-10 Mon 22:45] =>  3:58
+
+	Check out kindof-nice-highpass.png to see what it's stuck at now.
+
+	Well, I found out there are some ways to avoid overflowing, I'm going to try
+	them. In fact, I saw that you can multiple the gain to the coeffs and that
+	actually gave me an alright highpass, that actually worked. I forgot to take a
+	screenshot though...
+
+	Hopefully one of these methods will save me!!!!!
