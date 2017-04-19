@@ -681,3 +681,30 @@ smoothness and consistance. The amplitude really didn't change.
 
 
 	If I can break that spell, I'll be okay!
+* Monday, 4/17/17
+	CLOCK: [2017-04-17 Mon 18:26]--[2017-04-17 Mon 19:07] =>  0:41
+
+	I didn't have much time to work today. I made a small change to check to see
+	if I could use the eoc signal to run the IIR. The test didn't work.
+* Tuesday, 4/18/17
+	CLOCK: [2017-04-18 Tue 13:17]--[2017-04-18 Tue 20:50] =>  7:33
+
+	Well, I finally concluded that the problem is NOT with the coeffs. I finally
+	figured out how to scale the coeffs and I received the same problem. This much
+	mean that the problem is elsewhere. At least I can finally say that it isn't
+	the coeffs causing the problem. Time to look into the hardware more.
+
+	In the attempt to use another design that I stole from the internet, I found
+	out that for some reason the sample_trig signal doesn't what to work. There is
+	a bug that I'm trying to figure out but have yet to figure it out. I ran a
+	test using the ILA, which was inconclusive due to the 50MHz clock signal not
+	being found in the ILA. I'm not sure why it wasn't found but I think it had to
+	do with me using the same clock as the reference for it. Whatever, I'm going
+	to see if I can figure someting else out later. As of now, I'm just happy that
+	I found out how to do the scaling, it was very important for me to know if it
+	was the coeffs causing the problem in the first place.
+
+	Also, something to note about the new IIR IP: I didn't write it and it's very
+	ugly. It's very poorly written and is difficult to understand. The website it
+	came from had a really nice output so it should work.... "should" but we know
+	how things have been going. Good work today soldier.
