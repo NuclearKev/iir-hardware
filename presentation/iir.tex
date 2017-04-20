@@ -1,0 +1,112 @@
+\documentclass{beamer}
+\usetheme{Median}
+\title{IIR Filter IP}
+\date{\today}
+\author{Kevin Bloom}
+\institute{Pennsylvania College of Technology}
+
+%% \setbeamrecovered{invisible}
+\setbeamercovered{%
+  again covered={\opaqueness<1->{50}}}
+\begin{document}
+
+\maketitle
+
+\section{Overview}
+\begin{frame}{Overview}
+  \begin{itemize}[<+>]
+  \item System Design
+  \item IIR IP
+  \item Zynq Communication
+  \item Example Outputs
+  \end{itemize}
+\end{frame}
+
+\section{System Design}
+\begin{frame}{System Design}
+  Picture of the entire system, zoom in to see/explain things.
+\end{frame}
+
+\section{IIR IP}
+\begin{frame}{IIR IP}
+  This frame will contain a picture of the IP. Discuss the I/O pins.
+\end{frame}
+\begin{frame}{IIR IP --- Data Input Process }
+  These frames will contain code snippets from the IP.\@ Namely the important
+  parts such as data (feedforward)/feedback input, arithmetic, data output, and
+  the elaborated design.
+\end{frame}
+\begin{frame}{IIR IP --- Arithmetic}
+  Arithmetic
+\end{frame}
+\begin{frame}{IIR IP --- Data Output}
+  Data Output
+\end{frame}
+\begin{frame}{IIR IP --- Elaborated Design }
+  Big Picture, will need to zoom in.
+\end{frame}
+\begin{frame}{IIR IP --- IIR Troubles }
+  \begin{itemize}[<+>]
+  \item Single Stage vs BiQuad
+  \item Floating Point to Fixed Point
+  \item Gains and Scaling
+  \end{itemize}
+\end{frame}
+\begin{frame}{IIR IP --- Single Stage Problems}
+  This will probably have 2 pictures and some bullets: one of a completely fine
+  set of coefficients and another with a bad set on one side and on the other
+  side there will be a list of things that are wrong.
+  \begin{itemize}[<+>]
+  \item Number of coefficients increases dramatically
+  \item Numerator coefficients approach zero
+  \item Denominator coefficients approach infinity
+  \end{itemize}
+\end{frame}
+\begin{frame}{IIR IP --- BiQuad}
+  This will have a picture of the coefficients generated for a BiQuad to one
+  side. The other side will have some bulleted information.
+  Pros:
+  \begin{itemize}[<+>]
+  \item Number of coefficients never change
+  \item Small coefficient magnitudes
+  \item Easy to make generic
+  \end{itemize}
+
+  Cons:
+  \begin{itemize}[<+>]
+  \item Numerator coefficients need scaled
+  \item Requires more hardware
+  \end{itemize}
+\end{frame}
+\begin{frame}{IIR IP --- Fixed Point}
+  A discussion on why the coefficients need to be scaled. Probably will just
+  contain pictures.
+\end{frame}
+\begin{frame}{IIR IP --- Scaling}
+  A discussion on how to scale coefficients in MATLAB and the remaining issues
+  with scaling.
+\end{frame}
+
+\section{Zynq Communication}
+\begin{frame}{Zynq Communication --- Outside the IP}
+  Picture of the GPIOs that connect with the IPs, probably won't be using the
+  mux/dmux design for this, so I'll be super basic. I might remove this entire
+  section because it is so basic.
+\end{frame}
+\begin{frame}{Zynq Communication --- Inside the IP}
+  Snippet of the coefficient input process
+\end{frame}
+
+\section{Example Outputs}
+\begin{frame}{Example Outputs --- Lowpass}
+  Picture of a lowpass filter, and the properties listed somewhere on here.
+\end{frame}
+\begin{frame}{Example Outputs --- Highpass}
+  Picture of a highpass filter, and the properties listed somewhere on here.
+\end{frame}
+\begin{frame}{Example Outputs --- Something Else}
+  Picture of a something else filter, and the properties listed somewhere on
+  here.
+\end{frame}
+
+\end{document}
