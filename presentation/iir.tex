@@ -53,30 +53,46 @@
   \end{itemize}
 \end{frame}
 \begin{frame}{IIR IP --- Single Stage Problems}
-  This will probably have 2 pictures and some bullets: one of a completely fine
-  set of coefficients and another with a bad set on one side and on the other
-  side there will be a list of things that are wrong.
-  \begin{itemize}[<+>]
-  \item Number of coefficients increases dramatically
-  \item Numerator coefficients approach zero
-  \item Denominator coefficients approach infinity
-  \end{itemize}
+  \begin{columns}[T]
+    \begin{column}[T]{5cm}
+      \begin{itemize}[<+>]
+      \item Number of coefficients increases dramatically
+      \item Numerator coefficients approach zero
+      \item Denominator coefficients approach infinity
+      \end{itemize}
+      \center{
+      \visible<4->{\includegraphics[height=2.5cm]{standard-coeffs-48kfs-10800fc.png}}}
+    \end{column}
+    \begin{column}[T]{5cm}
+      \center{
+      \visible<5->{\includegraphics[height=2.5cm]{standard-coeffs-100kfs-5kfc.png}}
+      \vspace{.08in}
+      \visible<6->{\includegraphics[height=4cm]{standard-coeffs-48kfs-10800fc-8order.png}}}
+    \end{column}
+  \end{columns}
 \end{frame}
-\begin{frame}{IIR IP --- BiQuad}
-  This will have a picture of the coefficients generated for a BiQuad to one
-  side. The other side will have some bulleted information.
-  Pros:
-  \begin{itemize}[<+>]
-  \item Number of coefficients never change
-  \item Small coefficient magnitudes
-  \item Easy to make generic
-  \end{itemize}
 
-  Cons:
-  \begin{itemize}[<+>]
-  \item Numerator coefficients need scaled
-  \item Requires more hardware
-  \end{itemize}
+\begin{frame}{IIR IP --- BiQuad}
+  \begin{columns}[T]
+    \begin{column}[T]{5cm}
+      \visible<1->{Pros}
+      \begin{itemize}[<+>]
+      \item Number of coefficients never change
+      \item Small coefficient magnitudes
+      \item Easy to make generic
+      \end{itemize}
+      \visible<4->{Cons}
+      \begin{itemize}[<+>]
+      \item Numerator coefficients need scaled
+      \item Requires more hardware
+      \end{itemize}
+    \end{column}
+    \begin{column}[T]{5cm}
+      \visible<6->{\includegraphics[height=3cm]{biquad-coeffs-section1-48kfs-10800fc.png}}
+      \vfill
+      \visible<6->{\includegraphics[height=3cm]{biquad-coeffs-section2-48kfs-10800fc.png}}
+    \end{column}
+  \end{columns}
 \end{frame}
 \begin{frame}{IIR IP --- Fixed Point}
   A discussion on why the coefficients need to be scaled. Probably will just
