@@ -709,4 +709,11 @@ smoothness and consistance. The amplitude really didn't change.
 	came from had a really nice output so it should work.... "should" but we know
 	how things have been going. Good work today soldier.
 * Thursday, 4/20/17
-	CLOCK: [2017-04-20 Thu 13:47]
+	CLOCK: [2017-04-20 Thu 13:47]--[2017-04-20 Thu 20:17] =>  6:30
+
+	Well, I actually got a pretty good highpass and lowpass filter when using
+	coeffs that have been defined as internal signals. The issue, once again, is
+	that I cannot change them. The highpass and lowpass were stuck at cutoff
+	ranging from 7k - 8k but nothing more or less. I suppose that there isn't much
+	else I can do at this point so I might as well just though the towel in and
+	start writing the report for it. There's a lot I'll have to do for that.
