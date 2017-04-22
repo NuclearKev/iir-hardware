@@ -32,15 +32,29 @@
   This frame will contain a picture of the IP. Discuss the I/O pins.
 \end{frame}
 \begin{frame}{IIR IP --- Data Input Process }
-  These frames will contain code snippets from the IP.\@ Namely the important
-  parts such as data (feedforward)/feedback input, arithmetic, data output, and
-  the elaborated design.
+  \includegraphics[height=3.5cm]
+                  {data-input.png}
 \end{frame}
 \begin{frame}{IIR IP --- Arithmetic}
-  Arithmetic
+  \includegraphics[height=3.5cm]
+                  {mult.png}
 \end{frame}
+\begin{frame}{IIR IP --- Arithmetic}
+  \includegraphics[height=3cm]
+                  {add0.png}
+\end{frame}
+\begin{frame}{IIR IP --- Arithmetic}
+  \includegraphics[height=2.5cm]
+                  {add1.png}
+\end{frame}
+\begin{frame}{IIR IP --- Arithmetic}
+  \includegraphics[height=2.5cm]
+                  {final-add.png}
+\end{frame}
+
 \begin{frame}{IIR IP --- Data Output}
-  Data Output
+  \includegraphics[height=3.5cm]
+                  {output.png}
 \end{frame}
 \begin{frame}{IIR IP --- Elaborated Design }
   Big Picture, will need to zoom in.
@@ -61,17 +75,19 @@
       \item Denominator coefficients approach infinity
       \end{itemize}
       \center{
-      \visible<4->{\includegraphics[height=2.5cm]{standard-coeffs-48kfs-10800fc.png}}}
+        \visible<4->{\includegraphics[height=2.5cm]
+          {standard-coeffs-48kfs-10800fc.png}}}
     \end{column}
     \begin{column}[T]{5cm}
       \center{
-      \visible<5->{\includegraphics[height=2.5cm]{standard-coeffs-100kfs-5kfc.png}}
+        \visible<5->{\includegraphics[height=2.5cm]
+          {standard-coeffs-100kfs-5kfc.png}}
       \vspace{.08in}
-      \visible<6->{\includegraphics[height=4cm]{standard-coeffs-48kfs-10800fc-8order.png}}}
+      \visible<6->{\includegraphics[height=4cm]
+        {standard-coeffs-48kfs-10800fc-8order.png}}}
     \end{column}
   \end{columns}
 \end{frame}
-
 \begin{frame}{IIR IP --- BiQuad}
   \begin{columns}[T]
     \begin{column}[T]{5cm}
@@ -88,19 +104,42 @@
       \end{itemize}
     \end{column}
     \begin{column}[T]{5cm}
-      \visible<6->{\includegraphics[height=3cm]{biquad-coeffs-section1-48kfs-10800fc.png}}
+      \visible<6->{\includegraphics[height=3cm]
+        {biquad-coeffs-section1-48kfs-10800fc.png}}
       \vfill
-      \visible<6->{\includegraphics[height=3cm]{biquad-coeffs-section2-48kfs-10800fc.png}}
+      \visible<6->{\includegraphics[height=3cm]
+        {biquad-coeffs-section2-48kfs-10800fc.png}}
     \end{column}
   \end{columns}
 \end{frame}
 \begin{frame}{IIR IP --- Fixed Point}
-  A discussion on why the coefficients need to be scaled. Probably will just
-  contain pictures.
+  \center{
+    \includegraphics[height=5cm]
+                  {overflow-coeffs.png}}
 \end{frame}
 \begin{frame}{IIR IP --- Scaling}
-  A discussion on how to scale coefficients in MATLAB and the remaining issues
-  with scaling.
+  \center{
+    \includegraphics[height=5cm]
+                    {scaling-location.png}
+    }
+\end{frame}
+\begin{frame}{IIR IP --- Scaling}
+  \center{
+    \includegraphics[height=7.5cm]
+                    {scaled-window.png}
+  }
+\end{frame}
+\begin{frame}{IIR IP --- Scaling}
+  \begin{columns}[T]
+    \begin{column}[T]{5cm}
+      \includegraphics[height=4cm]
+                      {scaled-with-l1.png}
+    \end{column}
+    \begin{column}[T]{5cm}
+      \includegraphics[height=4cm]
+                      {scaled-with-L2.png}
+    \end{column}
+  \end{columns}
 \end{frame}
 
 \section{Zynq Communication}
@@ -115,14 +154,16 @@
 
 \section{Example Outputs}
 \begin{frame}{Example Outputs --- Lowpass}
-  Picture of a lowpass filter, and the properties listed somewhere on here.
+  \includegraphics[height=6.5cm]
+                  {very-nice-8th-order-lowpass.png}
 \end{frame}
 \begin{frame}{Example Outputs --- Highpass}
-  Picture of a highpass filter, and the properties listed somewhere on here.
+  \includegraphics[height=6.5cm]
+                  {iir-highpass-test2.png}
 \end{frame}
 \begin{frame}{Example Outputs --- Something Else}
-  Picture of a something else filter, and the properties listed somewhere on
-  here.
+  \includegraphics[height=6.5cm]
+                  {iir-.png}
 \end{frame}
 
 \end{document}
