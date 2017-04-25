@@ -23,13 +23,37 @@
 \end{frame}
 
 \section{System Design}
-\begin{frame}{System Design}
-  Picture of the entire system, zoom in to see/explain things.
+\begin{frame}{System Design --- Single BiQuad}
+  \center{
+    \includegraphics[height=7cm]
+                    {system-design-single-biquad.png}}
+\end{frame}
+\begin{frame}{System Design --- Multiple BiQuads Part 1}
+  \center{
+    \includegraphics[height=6cm]
+                    {system-design-8thorder-biquad-pt1.png}}
+\end{frame}
+\begin{frame}{System Design --- Multiple BiQuads Part 2}
+  \center{
+    \includegraphics[height=5.5cm]
+                    {system-design-8thorder-biquad-pt2.png}}
+\end{frame}
+\begin{frame}{System Design --- Multiple BiQuads Part 3}
+  \center{
+    \includegraphics[height=6.5cm]
+                    {system-design-8thorder-biquad-pt3.png}}
 \end{frame}
 
 \section{IIR IP}
-\begin{frame}{IIR IP}
-  This frame will contain a picture of the IP. Discuss the I/O pins.
+\begin{frame}{IIR IP --- Hardware Only}
+  \center{
+    \includegraphics[height=7.5cm]
+                    {iir-ip-external-manual-coeffs.png}}
+\end{frame}
+\begin{frame}{IIR IP --- Zynq Fed}
+  \center{
+  \includegraphics[height=5cm]
+                  {iir-ip-external-feedback.png}}
 \end{frame}
 \begin{frame}{IIR IP --- Data Input Process }
   \includegraphics[height=3.5cm]
@@ -51,13 +75,9 @@
   \includegraphics[height=2.5cm]
                   {final-add.png}
 \end{frame}
-
 \begin{frame}{IIR IP --- Data Output}
   \includegraphics[height=3.5cm]
                   {output.png}
-\end{frame}
-\begin{frame}{IIR IP --- Elaborated Design }
-  Big Picture, will need to zoom in.
 \end{frame}
 \begin{frame}{IIR IP --- IIR Troubles }
   \begin{itemize}[<+>]
@@ -82,9 +102,9 @@
       \center{
         \visible<5->{\includegraphics[height=2.5cm]
           {standard-coeffs-100kfs-5kfc.png}}
-      \vspace{.08in}
-      \visible<6->{\includegraphics[height=4cm]
-        {standard-coeffs-48kfs-10800fc-8order.png}}}
+        \vspace{.08in}
+        \visible<6->{\includegraphics[height=4cm]
+          {standard-coeffs-48kfs-10800fc-8order.png}}}
     \end{column}
   \end{columns}
 \end{frame}
@@ -115,13 +135,13 @@
 \begin{frame}{IIR IP --- Fixed Point}
   \center{
     \includegraphics[height=5cm]
-                  {overflow-coeffs.png}}
+                    {overflow-coeffs.png}}
 \end{frame}
 \begin{frame}{IIR IP --- Scaling}
   \center{
     \includegraphics[height=5cm]
                     {scaling-location.png}
-    }
+  }
 \end{frame}
 \begin{frame}{IIR IP --- Scaling}
   \center{
@@ -144,15 +164,19 @@
 
 \section{Zynq Communication}
 \begin{frame}{Zynq Communication --- Outside the IP}
-  Picture of the GPIOs that connect with the IPs, probably won't be using the
-  mux/dmux design for this, so I'll be super basic. I might remove this entire
-  section because it is so basic.
+  \center{
+    \includegraphics[height=5cm]
+                    {zynq-communication-design.png}}
 \end{frame}
 \begin{frame}{Zynq Communication --- Inside the IP}
-  Snippet of the coefficient input process
+  \center{
+    \includegraphics[height=5cm]
+                    {coeff.png}}
 \end{frame}
 \begin{frame}{Zynq Communication --- Inside the Zynq}
-  Snippet of the coefficient input process
+  \center{
+    \includegraphics[height=3cm]
+                    {zynq-coeff.png}}
 \end{frame}
 
 \section{Example Outputs}
@@ -165,8 +189,8 @@
                   {iir-highpass-test2.png}
 \end{frame}
 \begin{frame}{Example Outputs --- Something Else}
-  \includegraphics[height=6.5cm]
-                  {iir-.png}
+  %% \includegraphics[height=6.5cm]
+  %%                 {}
 \end{frame}
 
 \end{document}
