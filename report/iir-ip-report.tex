@@ -1,0 +1,87 @@
+\documentclass[12pt,a4paper,titlepage]{article}
+
+\usepackage{times}
+\usepackage{setspace}
+\usepackage{textcomp}
+\usepackage[a4paper,left=1in,top=1in,right=1in,bottom=1in]{geometry}
+
+\usepackage[english]{babel}
+\usepackage[backend=biber]{biblatex}
+\usepackage{csquotes}
+
+\usepackage[bookmarks]{hyperref}
+\hypersetup{colorlinks=true,allcolors=black}
+\usepackage{hypcap}
+
+
+\bibliography{sources.bib}
+
+
+\doublespacing{}
+\oddsidemargin = 0pt
+\headheight = 0pt
+\topmargin = 0pt
+\headsep = 0pt
+\marginparwidth = 0pt
+\textwidth = 450pt
+
+
+\begin{document}
+
+\title{IIR IP}
+\author{Kevin Bloom \\ Rev A}
+\maketitle
+
+\newpage
+
+\tableofcontents
+
+\newpage
+
+\section{Introduction}
+When selecting this project, I was under the assumption that it would be fairly
+easy to complete. Seeing as completing this task in software isn't a huge deal,
+I assumed the same for hardware. To my surprise, this was far from true. The
+calculation for IIR is quite difficult to complete in hardware, as I will
+discuss in this report. I will be discussing the theory behind the IIR in
+hardware, the major issues that can occur, and how one could complete this task
+in the future.
+
+\subsection{Important Files}
+Inside of this project, there are a few different files that are important.
+Firstly, my notebook. This file is entitled \texttt{notebook.org} and contains
+information on my process throughout the semester. You can open it with a text
+editor of choice, or you can view the exported \texttt{notebook.html}
+file. Please note that the HTML version doesn't contain all of the clock
+stamps. Inside of \texttt{presentation/} is the presentation and its source. The
+source for this report can be found in \texttt{report/}. Inside of
+\texttt{projects/} will be all of the different projects that I worked on. The
+important ones to note are: \texttt{2nd-order-single-section/},
+\texttt{complex-iir/}, and \texttt{the-really-big-one/}.
+
+Just so that it's easier to find your way, I will do a quick description of each
+project. This will prevent you from having to search
+around. \texttt{2nd-order-single-section/} is a design that only uses a single
+section BiQuad. This was used to prove that there was something wrong with the
+BiQuad implementation of the IP. \texttt{complex-iir/} contains a design that
+doesn't use the Zynq. It does everything in hardware. The current setup uses
+internally selected coefficients, opposed to the normally externally fed
+coefficients. Lastly, \texttt{the-really-big-one/} is a design that uses pretty
+much everything. It is set up with 4 BiQuads cascaded serially and uses the dmux
+and mux IPs to make the design generic.
+
+\section{Single-Section}
+
+
+\subsection{BiQuad}
+
+\appendix
+
+\newpage
+
+\printbibliography[
+heading=bibintoc,
+title={Resources}
+]
+
+\end{document}
