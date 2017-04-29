@@ -1,4 +1,5 @@
 \documentclass{beamer}
+\usepackage{caption}
 \usetheme{Median}
 \title{IIR Filter IP}
 \date{\today}
@@ -22,26 +23,10 @@
   \end{itemize}
 \end{frame}
 
-\section{System Design}
-\begin{frame}{System Design --- Single BiQuad}
-  \center{
-    \includegraphics[height=7cm]
-                    {system-design-single-biquad.png}}
-\end{frame}
-\begin{frame}{System Design --- Multiple BiQuads Part 1}
+\begin{frame}{System Design}
   \center{
     \includegraphics[height=6cm]
-                    {system-design-8thorder-biquad-pt1.png}}
-\end{frame}
-\begin{frame}{System Design --- Multiple BiQuads Part 2}
-  \center{
-    \includegraphics[height=5.5cm]
-                    {system-design-8thorder-biquad-pt2.png}}
-\end{frame}
-\begin{frame}{System Design --- Multiple BiQuads Part 3}
-  \center{
-    \includegraphics[height=6.5cm]
-                    {system-design-8thorder-biquad-pt3.png}}
+                    {system-design-final.png}}
 \end{frame}
 
 \section{IIR IP}
@@ -181,16 +166,37 @@
 
 \section{Example Outputs}
 \begin{frame}{Example Outputs --- Lowpass}
-  \includegraphics[height=6.5cm]
-                  {very-nice-8th-order-lowpass.png}
+  \center{
+    \begin{figure}
+      \centering
+      \includegraphics[height=6.5cm]
+                      {lowpass-final.png}
+                      \caption*{$F_s = 48$kHz, $F_c = 10.8$kHz}
+  \end{figure}}
 \end{frame}
 \begin{frame}{Example Outputs --- Highpass}
-  \includegraphics[height=6.5cm]
-                  {iir-highpass-test2.png}
+  \center{
+    \begin{figure}
+      \centering
+      \includegraphics[height=6.5cm]
+                      {highpass-final.png}
+                      \caption*{$F_s = 48$kHz, $F_c = 10.8$kHz}
+  \end{figure}}
 \end{frame}
-\begin{frame}{Example Outputs --- Something Else}
-  %% \includegraphics[height=6.5cm]
-  %%                 {}
+\begin{frame}{Example Outputs --- Bandpass}
+  \center{
+    \begin{figure}
+      \centering
+      \includegraphics[height=6.5cm]
+                      {bandpass-final.png}
+                      \caption*{$F_s = 48$kHz, Pass band = 8.4kHz to 13.2kHz}
+  \end{figure}}
+\end{frame}
+
+\begin{frame}{Conclusion}
+  \center{
+    \includegraphics[height=6cm]
+                    {system-design-final.png}}
 \end{frame}
 
 \end{document}

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016/Parabola) (preloaded format=pdflatex 2016.12.21)  25 APR 2017 14:28
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016/Parabola) (preloaded format=pdflatex 2016.12.21)  29 APR 2017 16:21
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -665,7 +665,27 @@ Package: beamerinnerthemedefault 2014/06/30  (rcs-revision 580088513a67)
 (/usr/share/texmf-dist/tex/latex/beamer/themes/outer/beamerouterthemedefault.st
 y
 Package: beamerouterthemedefault 2012/12/19  (rcs-revision 1686da3db3c9)
-))) (./beamerthemeMedian.sty
+))) (/usr/share/texmf-dist/tex/latex/caption/caption.sty
+Package: caption 2016/02/21 v3.3-144 Customizing captions (AR)
+
+(/usr/share/texmf-dist/tex/latex/caption/caption3.sty
+Package: caption3 2016/05/22 v1.7-166 caption3 kernel (AR)
+Package caption3 Info: TeX engine: e-TeX on input line 67.
+\captionmargin=\dimen188
+\captionmargin@=\dimen189
+\captionwidth=\dimen190
+\caption@tempdima=\dimen191
+\caption@indent=\dimen192
+\caption@parindent=\dimen193
+\caption@hangindent=\dimen194
+)
+\c@ContinuedFloat=\count153
+Package caption Info: beamer document class.
+Package caption Info: hyperref package is loaded.
+Package caption Info: Hyperref support is turned off
+(caption)             because hyperref has stopped early.
+)
+(./beamerthemeMedian.sty
 (/usr/share/texmf-dist/tex/latex/pgf/frontendlayer/tikz.sty
 (/usr/share/texmf-dist/tex/latex/pgf/basiclayer/pgf.sty
 Package: pgf 2015/08/07 v3.0.1a (rcs-revision 1.15)
@@ -679,8 +699,8 @@ File: pgfmoduleplot.code.tex 2015/08/03  (rcs-revision 1.13)
 )
 (/usr/share/texmf-dist/tex/latex/pgf/compatibility/pgfcomp-version-0-65.sty
 Package: pgfcomp-version-0-65 2007/07/03 v3.0.1a (rcs-revision 1.7)
-\pgf@nodesepstart=\dimen188
-\pgf@nodesepend=\dimen189
+\pgf@nodesepstart=\dimen195
+\pgf@nodesepend=\dimen196
 )
 (/usr/share/texmf-dist/tex/latex/pgf/compatibility/pgfcomp-version-1-18.sty
 Package: pgfcomp-version-1-18 2007/07/23 v3.0.1a (rcs-revision 1.1)
@@ -694,8 +714,8 @@ Package: pgfcomp-version-1-18 2007/07/23 v3.0.1a (rcs-revision 1.1)
 Package: pgffor 2013/12/13 v3.0.1a (rcs-revision 1.25)
 
 (/usr/share/texmf-dist/tex/generic/pgf/math/pgfmath.code.tex)
-\pgffor@iter=\dimen190
-\pgffor@skip=\dimen191
+\pgffor@iter=\dimen197
+\pgffor@skip=\dimen198
 \pgffor@stack=\toks43
 \pgffor@toks=\toks44
 ))
@@ -705,30 +725,30 @@ Package: tikz 2015/08/07 v3.0.1a (rcs-revision 1.151)
 (/usr/share/texmf-dist/tex/generic/pgf/libraries/pgflibraryplothandlers.code.te
 x
 File: pgflibraryplothandlers.code.tex 2013/08/31 v3.0.1a (rcs-revision 1.20)
-\pgf@plot@mark@count=\count153
-\pgfplotmarksize=\dimen192
+\pgf@plot@mark@count=\count154
+\pgfplotmarksize=\dimen199
 )
-\tikz@lastx=\dimen193
-\tikz@lasty=\dimen194
-\tikz@lastxsaved=\dimen195
-\tikz@lastysaved=\dimen196
-\tikzleveldistance=\dimen197
-\tikzsiblingdistance=\dimen198
+\tikz@lastx=\dimen256
+\tikz@lasty=\dimen257
+\tikz@lastxsaved=\dimen258
+\tikz@lastysaved=\dimen259
+\tikzleveldistance=\dimen260
+\tikzsiblingdistance=\dimen261
 \tikz@figbox=\box54
 \tikz@figbox@bg=\box55
 \tikz@tempbox=\box56
 \tikz@tempbox@bg=\box57
-\tikztreelevel=\count154
-\tikznumberofchildren=\count155
-\tikznumberofcurrentchild=\count156
-\tikz@fig@count=\count157
+\tikztreelevel=\count155
+\tikznumberofchildren=\count156
+\tikznumberofcurrentchild=\count157
+\tikz@fig@count=\count158
  (/usr/share/texmf-dist/tex/generic/pgf/modules/pgfmodulematrix.code.tex
 File: pgfmodulematrix.code.tex 2013/09/17  (rcs-revision 1.8)
-\pgfmatrixcurrentrow=\count158
-\pgfmatrixcurrentcolumn=\count159
-\pgf@matrix@numberofcolumns=\count160
+\pgfmatrixcurrentrow=\count159
+\pgfmatrixcurrentcolumn=\count160
+\pgf@matrix@numberofcolumns=\count161
 )
-\tikz@expandcount=\count161
+\tikz@expandcount=\count162
 
 (/usr/share/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibrary
 topaths.code.tex
@@ -738,7 +758,7 @@ Package: datetime 2015/03/20 v2.60 Date Time Package
 
 (/usr/share/texmf-dist/tex/latex/etoolbox/etoolbox.sty
 Package: etoolbox 2015/08/02 v2.2a e-TeX tools for LaTeX (JAW)
-\etb@tempcnta=\count162
+\etb@tempcnta=\count163
 )
 (/usr/share/texmf-dist/tex/latex/fmtcount/fmtcount.sty
 Package: fmtcount 2015/05/05 v3.01
@@ -754,7 +774,7 @@ Package: xkeyval 2014/12/03 v2.7a package option processing (HA)
 \XKV@toks=\toks45
 \XKV@tempa@toks=\toks46
 )
-\XKV@depth=\count163
+\XKV@depth=\count164
 File: xkeyval.tex 2014/12/03 v2.7a key=value parser (HA)
 ))
 (/usr/share/texmf-dist/tex/latex/fmtcount/fcprefix.sty
@@ -762,17 +782,17 @@ Package: fcprefix 2012/09/28
 
 (/usr/share/texmf-dist/tex/latex/fmtcount/fcnumparser.sty
 Package: fcnumparser 2012/09/28
-\fc@digit@counter=\count164
+\fc@digit@counter=\count165
 ))
-\c@padzeroesN=\count165
-\fc@tmpcatcode=\count166
-\@DT@modctr=\count167
-\@ordinalctr=\count168
-\@orgargctr=\count169
-\@strctr=\count170
-\@tmpstrctr=\count171
-\@DT@loopN=\count172
-\@DT@X=\count173
+\c@padzeroesN=\count166
+\fc@tmpcatcode=\count167
+\@DT@modctr=\count168
+\@ordinalctr=\count169
+\@orgargctr=\count170
+\@strctr=\count171
+\@tmpstrctr=\count172
+\@DT@loopN=\count173
+\@DT@X=\count174
 
 (/usr/share/texmf-dist/tex/latex/fmtcount/fc-english.def
 File: fc-english.def 2013/08/17
@@ -780,23 +800,23 @@ File: fc-english.def 2013/08/17
 (/usr/share/texmf-dist/tex/latex/datetime/datetime-defaults.sty
 Package: datetime-defaults 2013/09/10
 )
-\@day=\count174
-\@month=\count175
-\@year=\count176
-\c@HOUR=\count177
-\c@HOURXII=\count178
-\c@MINUTE=\count179
-\c@TOHOUR=\count180
-\c@TOMINUTE=\count181
-\c@SECOND=\count182
-\currenthour=\count183
-\currentminute=\count184
-\currentsecond=\count185
+\@day=\count175
+\@month=\count176
+\@year=\count177
+\c@HOUR=\count178
+\c@HOURXII=\count179
+\c@MINUTE=\count180
+\c@TOHOUR=\count181
+\c@TOMINUTE=\count182
+\c@SECOND=\count183
+\currenthour=\count184
+\currentminute=\count185
+\currentsecond=\count186
 Package datetime Info: No datetime.cfg file found, using default settings on in
 put line 308.
-\@dtctr=\count186
-\dayofyear=\count187
-\dayofweek=\count188
+\@dtctr=\count187
+\dayofyear=\count188
+\dayofweek=\count189
 LaTeX Info: Redefining \today on input line 736.
 \dt@a=\toks47
 \dt@b=\toks48
@@ -806,31 +826,31 @@ Package: textpos 2016/06/07 v1.8
 
 Package: textpos 2016/06/07 1.8, absolute positioning of text on the page
 \TP@textbox=\box58
-\TPHorizModule=\dimen199
-\TPVertModule=\dimen256
-\TP@margin=\dimen257
-\TP@absmargin=\dimen258
+\TPHorizModule=\dimen262
+\TPVertModule=\dimen263
+\TP@margin=\dimen264
+\TP@absmargin=\dimen265
 Grid set 16 x 16 = 22.7622pt x 17.07166pt
-\TPboxrulesize=\dimen259
+\TPboxrulesize=\dimen266
 \TP@tbargs=\toks49
-\TP@prevdepth=\dimen260
+\TP@prevdepth=\dimen267
 )) (./iir.aux)
 \openout1 = `iir.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 11.
-LaTeX Font Info:    ... okay on input line 11.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 11.
-LaTeX Font Info:    ... okay on input line 11.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 11.
-LaTeX Font Info:    ... okay on input line 11.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 11.
-LaTeX Font Info:    ... okay on input line 11.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 11.
-LaTeX Font Info:    ... okay on input line 11.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 11.
-LaTeX Font Info:    ... okay on input line 11.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 11.
-LaTeX Font Info:    ... okay on input line 11.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 12.
+LaTeX Font Info:    ... okay on input line 12.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 12.
+LaTeX Font Info:    ... okay on input line 12.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 12.
+LaTeX Font Info:    ... okay on input line 12.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 12.
+LaTeX Font Info:    ... okay on input line 12.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 12.
+LaTeX Font Info:    ... okay on input line 12.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 12.
+LaTeX Font Info:    ... okay on input line 12.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 12.
+LaTeX Font Info:    ... okay on input line 12.
 
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
@@ -868,16 +888,16 @@ LaTeX Font Info:    ... okay on input line 11.
 
 (/usr/share/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count189
-\scratchdimen=\dimen261
+\scratchcounter=\count190
+\scratchdimen=\dimen268
 \scratchbox=\box59
-\nofMPsegments=\count190
-\nofMParguments=\count191
+\nofMPsegments=\count191
+\nofMParguments=\count192
 \everyMPshowfont=\toks50
-\MPscratchCnt=\count192
-\MPscratchDim=\dimen262
-\MPnumerator=\count193
-\makeMPintoPDFobject=\count194
+\MPscratchCnt=\count193
+\MPscratchDim=\dimen269
+\MPnumerator=\count194
+\makeMPintoPDFobject=\count195
 \everyMPtoPDFconversion=\toks51
 ) (/usr/share/texmf-dist/tex/latex/oberdiek/epstopdf-base.sty
 Package: epstopdf-base 2016/05/15 v2.6 Base part for package epstopdf
@@ -898,7 +918,7 @@ e
 ))
 ABD: EveryShipout initializing macros
 \AtBeginShipoutBox=\box60
-Package hyperref Info: Link coloring OFF on input line 11.
+Package hyperref Info: Link coloring OFF on input line 12.
 
 (/usr/share/texmf-dist/tex/latex/hyperref/nameref.sty
 Package: nameref 2016/05/21 v2.44 Cross-referencing by name of section
@@ -906,58 +926,58 @@ Package: nameref 2016/05/21 v2.44 Cross-referencing by name of section
 (/usr/share/texmf-dist/tex/generic/oberdiek/gettitlestring.sty
 Package: gettitlestring 2016/05/16 v1.5 Cleanup title references (HO)
 )
-\c@section@level=\count195
+\c@section@level=\count196
 )
-LaTeX Info: Redefining \ref on input line 11.
-LaTeX Info: Redefining \pageref on input line 11.
-LaTeX Info: Redefining \nameref on input line 11.
+LaTeX Info: Redefining \ref on input line 12.
+LaTeX Info: Redefining \pageref on input line 12.
+LaTeX Info: Redefining \nameref on input line 12.
  (./iir.out)
 (./iir.out)
 \@outlinefile=\write5
 \openout5 = `iir.out'.
 
 LaTeX Font Info:    Overwriting symbol font `operators' in version `normal'
-(Font)                  OT1/cmr/m/n --> OT1/cmss/m/n on input line 11.
+(Font)                  OT1/cmr/m/n --> OT1/cmss/m/n on input line 12.
 LaTeX Font Info:    Overwriting symbol font `operators' in version `bold'
-(Font)                  OT1/cmr/bx/n --> OT1/cmss/bx/n on input line 11.
+(Font)                  OT1/cmr/bx/n --> OT1/cmss/bx/n on input line 12.
 \symnumbers=\mathgroup6
 \sympureletters=\mathgroup7
 LaTeX Font Info:    Overwriting math alphabet `\mathrm' in version `normal'
-(Font)                  OT1/cmss/m/n --> OT1/cmr/m/n on input line 11.
-LaTeX Font Info:    Redeclaring math alphabet \mathbf on input line 11.
+(Font)                  OT1/cmss/m/n --> OT1/cmr/m/n on input line 12.
+LaTeX Font Info:    Redeclaring math alphabet \mathbf on input line 12.
 LaTeX Font Info:    Overwriting math alphabet `\mathbf' in version `normal'
-(Font)                  OT1/cmr/bx/n --> OT1/cmss/bx/n on input line 11.
+(Font)                  OT1/cmr/bx/n --> OT1/cmss/bx/n on input line 12.
 LaTeX Font Info:    Overwriting math alphabet `\mathbf' in version `bold'
-(Font)                  OT1/cmr/bx/n --> OT1/cmss/bx/n on input line 11.
-LaTeX Font Info:    Redeclaring math alphabet \mathsf on input line 11.
+(Font)                  OT1/cmr/bx/n --> OT1/cmss/bx/n on input line 12.
+LaTeX Font Info:    Redeclaring math alphabet \mathsf on input line 12.
 LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `normal'
-(Font)                  OT1/cmss/m/n --> OT1/cmss/m/n on input line 11.
+(Font)                  OT1/cmss/m/n --> OT1/cmss/m/n on input line 12.
 LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `bold'
-(Font)                  OT1/cmss/bx/n --> OT1/cmss/m/n on input line 11.
-LaTeX Font Info:    Redeclaring math alphabet \mathit on input line 11.
+(Font)                  OT1/cmss/bx/n --> OT1/cmss/m/n on input line 12.
+LaTeX Font Info:    Redeclaring math alphabet \mathit on input line 12.
 LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `normal'
-(Font)                  OT1/cmr/m/it --> OT1/cmss/m/it on input line 11.
+(Font)                  OT1/cmr/m/it --> OT1/cmss/m/it on input line 12.
 LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `bold'
-(Font)                  OT1/cmr/bx/it --> OT1/cmss/m/it on input line 11.
-LaTeX Font Info:    Redeclaring math alphabet \mathtt on input line 11.
+(Font)                  OT1/cmr/bx/it --> OT1/cmss/m/it on input line 12.
+LaTeX Font Info:    Redeclaring math alphabet \mathtt on input line 12.
 LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `normal'
-(Font)                  OT1/cmtt/m/n --> OT1/cmtt/m/n on input line 11.
+(Font)                  OT1/cmtt/m/n --> OT1/cmtt/m/n on input line 12.
 LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `bold'
-(Font)                  OT1/cmtt/m/n --> OT1/cmtt/m/n on input line 11.
+(Font)                  OT1/cmtt/m/n --> OT1/cmtt/m/n on input line 12.
 LaTeX Font Info:    Overwriting symbol font `numbers' in version `bold'
-(Font)                  OT1/cmss/m/n --> OT1/cmss/bx/n on input line 11.
+(Font)                  OT1/cmss/m/n --> OT1/cmss/bx/n on input line 12.
 LaTeX Font Info:    Overwriting symbol font `pureletters' in version `bold'
-(Font)                  OT1/cmss/m/it --> OT1/cmss/bx/it on input line 11.
+(Font)                  OT1/cmss/m/it --> OT1/cmss/bx/it on input line 12.
 LaTeX Font Info:    Overwriting math alphabet `\mathrm' in version `bold'
-(Font)                  OT1/cmss/bx/n --> OT1/cmr/bx/n on input line 11.
+(Font)                  OT1/cmss/bx/n --> OT1/cmr/bx/n on input line 12.
 LaTeX Font Info:    Overwriting math alphabet `\mathbf' in version `bold'
-(Font)                  OT1/cmss/bx/n --> OT1/cmss/bx/n on input line 11.
+(Font)                  OT1/cmss/bx/n --> OT1/cmss/bx/n on input line 12.
 LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `bold'
-(Font)                  OT1/cmss/m/n --> OT1/cmss/bx/n on input line 11.
+(Font)                  OT1/cmss/m/n --> OT1/cmss/bx/n on input line 12.
 LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `bold'
-(Font)                  OT1/cmss/m/it --> OT1/cmss/bx/it on input line 11.
+(Font)                  OT1/cmss/m/it --> OT1/cmss/bx/it on input line 12.
 LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `bold'
-(Font)                  OT1/cmtt/m/n --> OT1/cmtt/bx/n on input line 11.
+(Font)                  OT1/cmtt/m/n --> OT1/cmtt/bx/n on input line 12.
 
 (/usr/share/texmf-dist/tex/latex/beamer/translator/dicts/translator-basic-dicti
 onary/translator-basic-dictionary-English.dict
@@ -983,11 +1003,13 @@ Dictionary: translator-numbers-dictionary, Language: English
 tionary/translator-theorem-dictionary-English.dict
 Dictionary: translator-theorem-dictionary, Language: English 
 )
-LaTeX Info: Redefining \includegraphics on input line 11.
+LaTeX Info: Redefining \includegraphics on input line 12.
+Package caption Info: Begin \AtBeginDocument code.
+Package caption Info: End \AtBeginDocument code.
  (./iir.nav)
 
 LaTeX Font Warning: Font shape `OT1/cmss/m/n' in size <4> not available
-(Font)              size <5> substituted on input line 13.
+(Font)              size <5> substituted on input line 14.
 
 [1
 
@@ -1000,168 +1022,191 @@ LaTeX Font Warning: Font shape `OT1/cmss/m/n' in size <4> not available
 ] [5
 
 ]
-<system-design-single-biquad.png, id=62, 1079.53313pt x 710.655pt>
-File: system-design-single-biquad.png Graphic file (type png)
+<system-design-final.png, id=58, 1236.11812pt x 717.43031pt>
+File: system-design-final.png Graphic file (type png)
 
-<use system-design-single-biquad.png>
-Package pdftex.def Info: system-design-single-biquad.png used on input line 30.
-
-(pdftex.def)             Requested size: 302.54724pt x 199.16928pt.
+<use system-design-final.png>
+Package pdftex.def Info: system-design-final.png used on input line 30.
+(pdftex.def)             Requested size: 294.1281pt x 170.71652pt.
  [6
 
- <./system-design-single-biquad.png>]
-<system-design-8thorder-biquad-pt1.png, id=70, 1148.79187pt x 664.73344pt>
-File: system-design-8thorder-biquad-pt1.png Graphic file (type png)
-
-<use system-design-8thorder-biquad-pt1.png>
-Package pdftex.def Info: system-design-8thorder-biquad-pt1.png used on input li
-ne 35.
-(pdftex.def)             Requested size: 295.03278pt x 170.71652pt.
- [7
-
- <./system-design-8thorder-biquad-pt1.png>]
-<system-design-8thorder-biquad-pt2.png, id=78, 1220.30907pt x 591.71063pt>
-File: system-design-8thorder-biquad-pt2.png Graphic file (type png)
-
-<use system-design-8thorder-biquad-pt2.png>
-Package pdftex.def Info: system-design-8thorder-biquad-pt2.png used on input li
-ne 40.
-(pdftex.def)             Requested size: 322.72865pt x 156.49014pt.
-
-Overfull \hbox (15.43878pt too wide) in paragraph at lines 40--40
- [] 
- []
-
-[8
-
- <./system-design-8thorder-biquad-pt2.png>]
-<system-design-8thorder-biquad-pt3.png, id=85, 843.15pt x 633.86812pt>
-File: system-design-8thorder-biquad-pt3.png Graphic file (type png)
-
-<use system-design-8thorder-biquad-pt3.png>
-Package pdftex.def Info: system-design-8thorder-biquad-pt3.png used on input li
-ne 45.
-(pdftex.def)             Requested size: 245.99962pt x 184.9429pt.
- [9
-
- <./system-design-8thorder-biquad-pt3.png>]
-<iir-ip-external-manual-coeffs.png, id=92, 254.45062pt x 327.47343pt>
+ <./system-design-final.png>]
+<iir-ip-external-manual-coeffs.png, id=66, 254.45062pt x 327.47343pt>
 File: iir-ip-external-manual-coeffs.png Graphic file (type png)
 
 <use iir-ip-external-manual-coeffs.png>
-Package pdftex.def Info: iir-ip-external-manual-coeffs.png used on input line 5
-2.
+Package pdftex.def Info: iir-ip-external-manual-coeffs.png used on input line 3
+7.
 (pdftex.def)             Requested size: 165.81026pt x 213.39566pt.
- [10
+ [7
 
- <./iir-ip-external-manual-coeffs.png>] <iir-ip-external-feedback.png, id=99, 4
+ <./iir-ip-external-manual-coeffs.png>] <iir-ip-external-feedback.png, id=74, 4
 33.62pt x 275.52937pt>
 File: iir-ip-external-feedback.png Graphic file (type png)
 
 <use iir-ip-external-feedback.png>
-Package pdftex.def Info: iir-ip-external-feedback.png used on input line 57.
+Package pdftex.def Info: iir-ip-external-feedback.png used on input line 42.
 (pdftex.def)             Requested size: 223.89574pt x 142.26378pt.
- [11
+ [8
 
  <./iir-ip-external-feedback.png>]
-<data-input.png, id=106, 544.0325pt x 183.68625pt>
+<data-input.png, id=81, 544.0325pt x 183.68625pt>
 File: data-input.png Graphic file (type png)
  <use data-input.png>
-Package pdftex.def Info: data-input.png used on input line 61.
+Package pdftex.def Info: data-input.png used on input line 46.
 (pdftex.def)             Requested size: 294.95195pt x 99.58464pt.
+ [9
+
+ <./data-input.png>] <mult.png, id=87, 552.0625pt x 183.68625pt>
+File: mult.png Graphic file (type png)
+ <use mult.png>
+Package pdftex.def Info: mult.png used on input line 50.
+(pdftex.def)             Requested size: 299.30548pt x 99.58464pt.
+
+[10
+
+ <./mult.png>] <add0.png, id=93, 649.42625pt x 184.69pt>
+File: add0.png Graphic file (type png)
+ <use add0.png>
+Package pdftex.def Info: add0.png used on input line 54.
+(pdftex.def)             Requested size: 300.14684pt x 85.35826pt.
+
+[11
+
+ <./add0.png>] <add1.png, id=99, 609.27625pt x 153.57375pt>
+File: add1.png Graphic file (type png)
+ <use add1.png>
+Package pdftex.def Info: add1.png used on input line 58.
+(pdftex.def)             Requested size: 282.20421pt x 71.13188pt.
 
 [12
 
- <./data-input.png>] <mult.png, id=112, 552.0625pt x 183.68625pt>
-File: mult.png Graphic file (type png)
+ <./add1.png>] <final-add.png, id=105, 503.8825pt x 123.46124pt>
+File: final-add.png Graphic file (type png)
 
-<use mult.png>
-Package pdftex.def Info: mult.png used on input line 65.
-(pdftex.def)             Requested size: 299.30548pt x 99.58464pt.
+<use final-add.png>
+Package pdftex.def Info: final-add.png used on input line 62.
+(pdftex.def)             Requested size: 290.3222pt x 71.13188pt.
  [13
 
- <./mult.png>] <add0.png, id=119, 649.42625pt x 184.69pt>
-File: add0.png Graphic file (type png)
-
-<use add0.png>
-Package pdftex.def Info: add0.png used on input line 69.
-(pdftex.def)             Requested size: 300.14684pt x 85.35826pt.
- [14
-
- <./add0.png>] <add1.png, id=125, 609.27625pt x 153.57375pt>
-File: add1.png Graphic file (type png)
-
-<use add1.png>
-Package pdftex.def Info: add1.png used on input line 73.
-(pdftex.def)             Requested size: 282.20421pt x 71.13188pt.
- [15
-
- <./add1.png>]
-<final-add.png, id=131, 503.8825pt x 123.46124pt>
-File: final-add.png Graphic file (type png)
- <use final-add.png>
-Package pdftex.def Info: final-add.png used on input line 77.
-(pdftex.def)             Requested size: 290.3222pt x 71.13188pt.
- [16
-
- <./final-add.png>] <output.png, id=137, 502.87875pt x 167.62625pt>
+ <./final-add.png>]
+<output.png, id=112, 502.87875pt x 167.62625pt>
 File: output.png Graphic file (type png)
  <use output.png>
-Package pdftex.def Info: output.png used on input line 81.
+Package pdftex.def Info: output.png used on input line 66.
 (pdftex.def)             Requested size: 298.75233pt x 99.58464pt.
+ [14
 
-[17
+ <./output.png>] [15
 
- <./output.png>] [18
+] [16
 
-] [19
-
-] [20
+] [17
 
 ]
-<standard-coeffs-48kfs-10800fc.png, id=159, 119.69719pt x 127.97812pt>
+<standard-coeffs-48kfs-10800fc.png, id=133, 119.69719pt x 127.97812pt>
 File: standard-coeffs-48kfs-10800fc.png Graphic file (type png)
 
 <use standard-coeffs-48kfs-10800fc.png>
-Package pdftex.def Info: standard-coeffs-48kfs-10800fc.png used on input line 1
-10.
+Package pdftex.def Info: standard-coeffs-48kfs-10800fc.png used on input line 9
+5.
 (pdftex.def)             Requested size: 66.52951pt x 71.13188pt.
 
-<standard-coeffs-100kfs-5kfc.png, id=160, 129.48375pt x 127.22531pt>
+<standard-coeffs-100kfs-5kfc.png, id=134, 129.48375pt x 127.22531pt>
 File: standard-coeffs-100kfs-5kfc.png Graphic file (type png)
 
 <use standard-coeffs-100kfs-5kfc.png>
-Package pdftex.def Info: standard-coeffs-100kfs-5kfc.png used on input line 110
-.
+Package pdftex.def Info: standard-coeffs-100kfs-5kfc.png used on input line 95.
+
 (pdftex.def)             Requested size: 72.39777pt x 71.13188pt.
 
-<standard-coeffs-48kfs-10800fc-8order.png, id=161, 134.75343pt x 206.27063pt>
+<standard-coeffs-48kfs-10800fc-8order.png, id=135, 134.75343pt x 206.27063pt>
 File: standard-coeffs-48kfs-10800fc-8order.png Graphic file (type png)
 
 <use standard-coeffs-48kfs-10800fc-8order.png>
 Package pdftex.def Info: standard-coeffs-48kfs-10800fc-8order.png used on input
- line 110.
+ line 95.
 (pdftex.def)             Requested size: 74.35107pt x 113.81102pt.
- [21
+ [18
 
  <./standard-coeffs-48kfs-10800fc.png> <./standard-coeffs-100kfs-5kfc.png> <./s
 tandard-coeffs-48kfs-10800fc-8order.png>]
 File: standard-coeffs-48kfs-10800fc.png Graphic file (type png)
  <use standard-coeffs-48kfs-10800fc.png>
-Package pdftex.def Info: standard-coeffs-48kfs-10800fc.png used on input line 1
-10.
+Package pdftex.def Info: standard-coeffs-48kfs-10800fc.png used on input line 9
+5.
 (pdftex.def)             Requested size: 66.52951pt x 71.13188pt.
 File: standard-coeffs-100kfs-5kfc.png Graphic file (type png)
 
 <use standard-coeffs-100kfs-5kfc.png>
-Package pdftex.def Info: standard-coeffs-100kfs-5kfc.png used on input line 110
-.
+Package pdftex.def Info: standard-coeffs-100kfs-5kfc.png used on input line 95.
+
 (pdftex.def)             Requested size: 72.39777pt x 71.13188pt.
 File: standard-coeffs-48kfs-10800fc-8order.png Graphic file (type png)
 
 <use standard-coeffs-48kfs-10800fc-8order.png>
 Package pdftex.def Info: standard-coeffs-48kfs-10800fc-8order.png used on input
- line 110.
+ line 95.
+(pdftex.def)             Requested size: 74.35107pt x 113.81102pt.
+ [19
+
+]
+File: standard-coeffs-48kfs-10800fc.png Graphic file (type png)
+
+<use standard-coeffs-48kfs-10800fc.png>
+Package pdftex.def Info: standard-coeffs-48kfs-10800fc.png used on input line 9
+5.
+(pdftex.def)             Requested size: 66.52951pt x 71.13188pt.
+File: standard-coeffs-100kfs-5kfc.png Graphic file (type png)
+ <use standard-coeffs-100kfs-5kfc.png>
+Package pdftex.def Info: standard-coeffs-100kfs-5kfc.png used on input line 95.
+
+(pdftex.def)             Requested size: 72.39777pt x 71.13188pt.
+File: standard-coeffs-48kfs-10800fc-8order.png Graphic file (type png)
+
+<use standard-coeffs-48kfs-10800fc-8order.png>
+Package pdftex.def Info: standard-coeffs-48kfs-10800fc-8order.png used on input
+ line 95.
+(pdftex.def)             Requested size: 74.35107pt x 113.81102pt.
+ [20
+
+]
+File: standard-coeffs-48kfs-10800fc.png Graphic file (type png)
+
+<use standard-coeffs-48kfs-10800fc.png>
+Package pdftex.def Info: standard-coeffs-48kfs-10800fc.png used on input line 9
+5.
+(pdftex.def)             Requested size: 66.52951pt x 71.13188pt.
+File: standard-coeffs-100kfs-5kfc.png Graphic file (type png)
+ <use standard-coeffs-100kfs-5kfc.png>
+Package pdftex.def Info: standard-coeffs-100kfs-5kfc.png used on input line 95.
+
+(pdftex.def)             Requested size: 72.39777pt x 71.13188pt.
+File: standard-coeffs-48kfs-10800fc-8order.png Graphic file (type png)
+
+<use standard-coeffs-48kfs-10800fc-8order.png>
+Package pdftex.def Info: standard-coeffs-48kfs-10800fc-8order.png used on input
+ line 95.
+(pdftex.def)             Requested size: 74.35107pt x 113.81102pt.
+ [21
+
+]
+File: standard-coeffs-48kfs-10800fc.png Graphic file (type png)
+
+<use standard-coeffs-48kfs-10800fc.png>
+Package pdftex.def Info: standard-coeffs-48kfs-10800fc.png used on input line 9
+5.
+(pdftex.def)             Requested size: 66.52951pt x 71.13188pt.
+File: standard-coeffs-100kfs-5kfc.png Graphic file (type png)
+ <use standard-coeffs-100kfs-5kfc.png>
+Package pdftex.def Info: standard-coeffs-100kfs-5kfc.png used on input line 95.
+
+(pdftex.def)             Requested size: 72.39777pt x 71.13188pt.
+File: standard-coeffs-48kfs-10800fc-8order.png Graphic file (type png)
+
+<use standard-coeffs-48kfs-10800fc-8order.png>
+Package pdftex.def Info: standard-coeffs-48kfs-10800fc-8order.png used on input
+ line 95.
 (pdftex.def)             Requested size: 74.35107pt x 113.81102pt.
  [22
 
@@ -1169,99 +1214,39 @@ Package pdftex.def Info: standard-coeffs-48kfs-10800fc-8order.png used on input
 File: standard-coeffs-48kfs-10800fc.png Graphic file (type png)
 
 <use standard-coeffs-48kfs-10800fc.png>
-Package pdftex.def Info: standard-coeffs-48kfs-10800fc.png used on input line 1
-10.
+Package pdftex.def Info: standard-coeffs-48kfs-10800fc.png used on input line 9
+5.
 (pdftex.def)             Requested size: 66.52951pt x 71.13188pt.
 File: standard-coeffs-100kfs-5kfc.png Graphic file (type png)
  <use standard-coeffs-100kfs-5kfc.png>
-Package pdftex.def Info: standard-coeffs-100kfs-5kfc.png used on input line 110
-.
+Package pdftex.def Info: standard-coeffs-100kfs-5kfc.png used on input line 95.
+
 (pdftex.def)             Requested size: 72.39777pt x 71.13188pt.
 File: standard-coeffs-48kfs-10800fc-8order.png Graphic file (type png)
 
 <use standard-coeffs-48kfs-10800fc-8order.png>
 Package pdftex.def Info: standard-coeffs-48kfs-10800fc-8order.png used on input
- line 110.
+ line 95.
 (pdftex.def)             Requested size: 74.35107pt x 113.81102pt.
  [23
 
 ]
-File: standard-coeffs-48kfs-10800fc.png Graphic file (type png)
-
-<use standard-coeffs-48kfs-10800fc.png>
-Package pdftex.def Info: standard-coeffs-48kfs-10800fc.png used on input line 1
-10.
-(pdftex.def)             Requested size: 66.52951pt x 71.13188pt.
-File: standard-coeffs-100kfs-5kfc.png Graphic file (type png)
- <use standard-coeffs-100kfs-5kfc.png>
-Package pdftex.def Info: standard-coeffs-100kfs-5kfc.png used on input line 110
-.
-(pdftex.def)             Requested size: 72.39777pt x 71.13188pt.
-File: standard-coeffs-48kfs-10800fc-8order.png Graphic file (type png)
-
-<use standard-coeffs-48kfs-10800fc-8order.png>
-Package pdftex.def Info: standard-coeffs-48kfs-10800fc-8order.png used on input
- line 110.
-(pdftex.def)             Requested size: 74.35107pt x 113.81102pt.
- [24
-
-]
-File: standard-coeffs-48kfs-10800fc.png Graphic file (type png)
-
-<use standard-coeffs-48kfs-10800fc.png>
-Package pdftex.def Info: standard-coeffs-48kfs-10800fc.png used on input line 1
-10.
-(pdftex.def)             Requested size: 66.52951pt x 71.13188pt.
-File: standard-coeffs-100kfs-5kfc.png Graphic file (type png)
- <use standard-coeffs-100kfs-5kfc.png>
-Package pdftex.def Info: standard-coeffs-100kfs-5kfc.png used on input line 110
-.
-(pdftex.def)             Requested size: 72.39777pt x 71.13188pt.
-File: standard-coeffs-48kfs-10800fc-8order.png Graphic file (type png)
-
-<use standard-coeffs-48kfs-10800fc-8order.png>
-Package pdftex.def Info: standard-coeffs-48kfs-10800fc-8order.png used on input
- line 110.
-(pdftex.def)             Requested size: 74.35107pt x 113.81102pt.
- [25
-
-]
-File: standard-coeffs-48kfs-10800fc.png Graphic file (type png)
-
-<use standard-coeffs-48kfs-10800fc.png>
-Package pdftex.def Info: standard-coeffs-48kfs-10800fc.png used on input line 1
-10.
-(pdftex.def)             Requested size: 66.52951pt x 71.13188pt.
-File: standard-coeffs-100kfs-5kfc.png Graphic file (type png)
- <use standard-coeffs-100kfs-5kfc.png>
-Package pdftex.def Info: standard-coeffs-100kfs-5kfc.png used on input line 110
-.
-(pdftex.def)             Requested size: 72.39777pt x 71.13188pt.
-File: standard-coeffs-48kfs-10800fc-8order.png Graphic file (type png)
-
-<use standard-coeffs-48kfs-10800fc-8order.png>
-Package pdftex.def Info: standard-coeffs-48kfs-10800fc-8order.png used on input
- line 110.
-(pdftex.def)             Requested size: 74.35107pt x 113.81102pt.
- [26
-
-]
-<biquad-coeffs-section1-48kfs-10800fc.png, id=197, 146.04562pt x 130.23656pt>
+<biquad-coeffs-section1-48kfs-10800fc.png, id=171, 146.04562pt x 130.23656pt>
 File: biquad-coeffs-section1-48kfs-10800fc.png Graphic file (type png)
 
 <use biquad-coeffs-section1-48kfs-10800fc.png>
 Package pdftex.def Info: biquad-coeffs-section1-48kfs-10800fc.png used on input
- line 134.
+ line 119.
 (pdftex.def)             Requested size: 95.71962pt x 85.35826pt.
 
-<biquad-coeffs-section2-48kfs-10800fc.png, id=198, 144.54pt x 135.50626pt>
+<biquad-coeffs-section2-48kfs-10800fc.png, id=172, 144.54pt x 135.50626pt>
 File: biquad-coeffs-section2-48kfs-10800fc.png Graphic file (type png)
 
 <use biquad-coeffs-section2-48kfs-10800fc.png>
 Package pdftex.def Info: biquad-coeffs-section2-48kfs-10800fc.png used on input
- line 134.
+ line 119.
 (pdftex.def)             Requested size: 91.05183pt x 85.35826pt.
- [27
+ [24
 
  <./biquad-coeffs-section1-48kfs-10800fc.png> <./biquad-coeffs-section2-48kfs-1
 0800fc.png>]
@@ -1269,13 +1254,58 @@ File: biquad-coeffs-section1-48kfs-10800fc.png Graphic file (type png)
 
 <use biquad-coeffs-section1-48kfs-10800fc.png>
 Package pdftex.def Info: biquad-coeffs-section1-48kfs-10800fc.png used on input
- line 134.
+ line 119.
 (pdftex.def)             Requested size: 95.71962pt x 85.35826pt.
 File: biquad-coeffs-section2-48kfs-10800fc.png Graphic file (type png)
 
 <use biquad-coeffs-section2-48kfs-10800fc.png>
 Package pdftex.def Info: biquad-coeffs-section2-48kfs-10800fc.png used on input
- line 134.
+ line 119.
+(pdftex.def)             Requested size: 91.05183pt x 85.35826pt.
+ [25
+
+]
+File: biquad-coeffs-section1-48kfs-10800fc.png Graphic file (type png)
+
+<use biquad-coeffs-section1-48kfs-10800fc.png>
+Package pdftex.def Info: biquad-coeffs-section1-48kfs-10800fc.png used on input
+ line 119.
+(pdftex.def)             Requested size: 95.71962pt x 85.35826pt.
+File: biquad-coeffs-section2-48kfs-10800fc.png Graphic file (type png)
+
+<use biquad-coeffs-section2-48kfs-10800fc.png>
+Package pdftex.def Info: biquad-coeffs-section2-48kfs-10800fc.png used on input
+ line 119.
+(pdftex.def)             Requested size: 91.05183pt x 85.35826pt.
+ [26
+
+]
+File: biquad-coeffs-section1-48kfs-10800fc.png Graphic file (type png)
+
+<use biquad-coeffs-section1-48kfs-10800fc.png>
+Package pdftex.def Info: biquad-coeffs-section1-48kfs-10800fc.png used on input
+ line 119.
+(pdftex.def)             Requested size: 95.71962pt x 85.35826pt.
+File: biquad-coeffs-section2-48kfs-10800fc.png Graphic file (type png)
+
+<use biquad-coeffs-section2-48kfs-10800fc.png>
+Package pdftex.def Info: biquad-coeffs-section2-48kfs-10800fc.png used on input
+ line 119.
+(pdftex.def)             Requested size: 91.05183pt x 85.35826pt.
+ [27
+
+]
+File: biquad-coeffs-section1-48kfs-10800fc.png Graphic file (type png)
+
+<use biquad-coeffs-section1-48kfs-10800fc.png>
+Package pdftex.def Info: biquad-coeffs-section1-48kfs-10800fc.png used on input
+ line 119.
+(pdftex.def)             Requested size: 95.71962pt x 85.35826pt.
+File: biquad-coeffs-section2-48kfs-10800fc.png Graphic file (type png)
+
+<use biquad-coeffs-section2-48kfs-10800fc.png>
+Package pdftex.def Info: biquad-coeffs-section2-48kfs-10800fc.png used on input
+ line 119.
 (pdftex.def)             Requested size: 91.05183pt x 85.35826pt.
  [28
 
@@ -1284,154 +1314,131 @@ File: biquad-coeffs-section1-48kfs-10800fc.png Graphic file (type png)
 
 <use biquad-coeffs-section1-48kfs-10800fc.png>
 Package pdftex.def Info: biquad-coeffs-section1-48kfs-10800fc.png used on input
- line 134.
+ line 119.
 (pdftex.def)             Requested size: 95.71962pt x 85.35826pt.
 File: biquad-coeffs-section2-48kfs-10800fc.png Graphic file (type png)
 
 <use biquad-coeffs-section2-48kfs-10800fc.png>
 Package pdftex.def Info: biquad-coeffs-section2-48kfs-10800fc.png used on input
- line 134.
+ line 119.
 (pdftex.def)             Requested size: 91.05183pt x 85.35826pt.
  [29
 
 ]
-File: biquad-coeffs-section1-48kfs-10800fc.png Graphic file (type png)
-
-<use biquad-coeffs-section1-48kfs-10800fc.png>
-Package pdftex.def Info: biquad-coeffs-section1-48kfs-10800fc.png used on input
- line 134.
-(pdftex.def)             Requested size: 95.71962pt x 85.35826pt.
-File: biquad-coeffs-section2-48kfs-10800fc.png Graphic file (type png)
-
-<use biquad-coeffs-section2-48kfs-10800fc.png>
-Package pdftex.def Info: biquad-coeffs-section2-48kfs-10800fc.png used on input
- line 134.
-(pdftex.def)             Requested size: 91.05183pt x 85.35826pt.
- [30
-
-]
-File: biquad-coeffs-section1-48kfs-10800fc.png Graphic file (type png)
-
-<use biquad-coeffs-section1-48kfs-10800fc.png>
-Package pdftex.def Info: biquad-coeffs-section1-48kfs-10800fc.png used on input
- line 134.
-(pdftex.def)             Requested size: 95.71962pt x 85.35826pt.
-File: biquad-coeffs-section2-48kfs-10800fc.png Graphic file (type png)
-
-<use biquad-coeffs-section2-48kfs-10800fc.png>
-Package pdftex.def Info: biquad-coeffs-section2-48kfs-10800fc.png used on input
- line 134.
-(pdftex.def)             Requested size: 91.05183pt x 85.35826pt.
- [31
-
-]
-File: biquad-coeffs-section1-48kfs-10800fc.png Graphic file (type png)
-
-<use biquad-coeffs-section1-48kfs-10800fc.png>
-Package pdftex.def Info: biquad-coeffs-section1-48kfs-10800fc.png used on input
- line 134.
-(pdftex.def)             Requested size: 95.71962pt x 85.35826pt.
-File: biquad-coeffs-section2-48kfs-10800fc.png Graphic file (type png)
-
-<use biquad-coeffs-section2-48kfs-10800fc.png>
-Package pdftex.def Info: biquad-coeffs-section2-48kfs-10800fc.png used on input
- line 134.
-(pdftex.def)             Requested size: 91.05183pt x 85.35826pt.
- [32
-
-]
-<overflow-coeffs.png, id=232, 201.75375pt x 142.28156pt>
+<overflow-coeffs.png, id=206, 201.75375pt x 142.28156pt>
 File: overflow-coeffs.png Graphic file (type png)
 
 <use overflow-coeffs.png>
-Package pdftex.def Info: overflow-coeffs.png used on input line 139.
+Package pdftex.def Info: overflow-coeffs.png used on input line 124.
 (pdftex.def)             Requested size: 201.75017pt x 142.26378pt.
- [33
+ [30
 
  <./overflow-coeffs.png>]
-<scaling-location.png, id=239, 249.18094pt x 140.02313pt>
+<scaling-location.png, id=213, 249.18094pt x 140.02313pt>
 File: scaling-location.png Graphic file (type png)
 
 <use scaling-location.png>
-Package pdftex.def Info: scaling-location.png used on input line 145.
+Package pdftex.def Info: scaling-location.png used on input line 130.
 (pdftex.def)             Requested size: 253.1802pt x 142.26378pt.
- [34
+ [31
 
  <./scaling-location.png>]
-<scaled-window.png, id=246, 433.62pt x 313.9228pt>
+<scaled-window.png, id=221, 433.62pt x 313.9228pt>
 File: scaled-window.png Graphic file (type png)
  <use scaled-window.png>
-Package pdftex.def Info: scaled-window.png used on input line 151.
+Package pdftex.def Info: scaled-window.png used on input line 136.
 (pdftex.def)             Requested size: 294.75845pt x 213.39566pt.
 
-[35
+[32
 
  <./scaled-window.png>]
-<scaled-with-l1.png, id=253, 201.00093pt x 162.6075pt>
+<scaled-with-l1.png, id=228, 201.00093pt x 162.6075pt>
 File: scaled-with-l1.png Graphic file (type png)
 
 <use scaled-with-l1.png>
-Package pdftex.def Info: scaled-with-l1.png used on input line 163.
+Package pdftex.def Info: scaled-with-l1.png used on input line 148.
 (pdftex.def)             Requested size: 140.68741pt x 113.81102pt.
 
-<scaled-with-L2.png, id=254, 205.5178pt x 177.66376pt>
+<scaled-with-L2.png, id=229, 205.5178pt x 177.66376pt>
 File: scaled-with-L2.png Graphic file (type png)
 
 <use scaled-with-L2.png>
-Package pdftex.def Info: scaled-with-L2.png used on input line 163.
+Package pdftex.def Info: scaled-with-L2.png used on input line 148.
 (pdftex.def)             Requested size: 131.65637pt x 113.81102pt.
- [36
+ [33
 
  <./scaled-with-l1.png> <./scaled-with-L2.png>]
-<zynq-communication-design.png, id=262, 689.57625pt x 316.18124pt>
+<zynq-communication-design.png, id=237, 689.57625pt x 316.18124pt>
 File: zynq-communication-design.png Graphic file (type png)
 
 <use zynq-communication-design.png>
-Package pdftex.def Info: zynq-communication-design.png used on input line 170.
+Package pdftex.def Info: zynq-communication-design.png used on input line 155.
 (pdftex.def)             Requested size: 310.27487pt x 142.26378pt.
 
-Overfull \hbox (2.985pt too wide) in paragraph at lines 170--170
+Overfull \hbox (2.985pt too wide) in paragraph at lines 155--155
  [] 
  []
 
-[37
+[34
 
  <./zynq-communication-design.png>]
-<coeff.png, id=270, 480.79625pt x 242.9075pt>
+<coeff.png, id=244, 480.79625pt x 242.9075pt>
 File: coeff.png Graphic file (type png)
  <use coeff.png>
-Package pdftex.def Info: coeff.png used on input line 175.
+Package pdftex.def Info: coeff.png used on input line 160.
 (pdftex.def)             Requested size: 281.58379pt x 142.26378pt.
- [38
+ [35
 
- <./coeff.png>] <zynq-coeff.png, id=276, 447.6725pt x 135.50626pt>
+ <./coeff.png>] <zynq-coeff.png, id=250, 447.6725pt x 135.50626pt>
 File: zynq-coeff.png Graphic file (type png)
  <use zynq-coeff.png>
-Package pdftex.def Info: zynq-coeff.png used on input line 180.
+Package pdftex.def Info: zynq-coeff.png used on input line 165.
 (pdftex.def)             Requested size: 282.00784pt x 85.35826pt.
 
-[39
+[36
 
  <./zynq-coeff.png>]
-<very-nice-8th-order-lowpass.png, id=282, 1254.18562pt x 772.38562pt>
-File: very-nice-8th-order-lowpass.png Graphic file (type png)
+<lowpass-final.png, id=256, 1260.96094pt x 773.13844pt>
+File: lowpass-final.png Graphic file (type png)
 
-<use very-nice-8th-order-lowpass.png>
-Package pdftex.def Info: very-nice-8th-order-lowpass.png used on input line 186
-.
-(pdftex.def)             Requested size: 300.30261pt x 184.9429pt.
+<use lowpass-final.png>
+Package pdftex.def Info: lowpass-final.png used on input line 176.
+(pdftex.def)             Requested size: 301.63629pt x 184.9429pt.
+LaTeX Font Info:    Try loading font information for U+msa on input line 176.
+ (/usr/share/texmf-dist/tex/latex/amsfonts/umsa.fd
+File: umsa.fd 2013/01/14 v3.01 AMS symbols A
+)
+LaTeX Font Info:    Try loading font information for U+msb on input line 176.
+
+(/usr/share/texmf-dist/tex/latex/amsfonts/umsb.fd
+File: umsb.fd 2013/01/14 v3.01 AMS symbols B
+) [37
+
+ <./lowpass-final.png>]
+<highpass-final.png, id=267, 1260.20813pt x 772.38562pt>
+File: highpass-final.png Graphic file (type png)
+
+<use highpass-final.png>
+Package pdftex.def Info: highpass-final.png used on input line 185.
+(pdftex.def)             Requested size: 301.74464pt x 184.9429pt.
+ [38
+
+ <./highpass-final.png>]
+<bandpass-final.png, id=274, 1260.20813pt x 773.13844pt>
+File: bandpass-final.png Graphic file (type png)
+
+<use bandpass-final.png>
+Package pdftex.def Info: bandpass-final.png used on input line 194.
+(pdftex.def)             Requested size: 301.4562pt x 184.9429pt.
+ [39
+
+ <./bandpass-final.png>]
+File: system-design-final.png Graphic file (type png)
+
+<use system-design-final.png>
+Package pdftex.def Info: system-design-final.png used on input line 200.
+(pdftex.def)             Requested size: 294.1281pt x 170.71652pt.
  [40
-
- <./very-nice-8th-order-lowpass.png>]
-<iir-highpass-test2.png, id=289, 1261.71375pt x 788.19469pt>
-File: iir-highpass-test2.png Graphic file (type png)
-
-<use iir-highpass-test2.png>
-Package pdftex.def Info: iir-highpass-test2.png used on input line 190.
-(pdftex.def)             Requested size: 296.04073pt x 184.9429pt.
- [41
-
- <./iir-highpass-test2.png>] [42
 
 ]
 \tf@nav=\write6
@@ -1443,35 +1450,37 @@ Package pdftex.def Info: iir-highpass-test2.png used on input line 190.
 \tf@snm=\write8
 \openout8 = `iir.snm'.
 
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 196.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 196.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 202.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 202.
  (./iir.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 196.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 196.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 202.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 202.
 Package rerunfilecheck Info: File `iir.out' has not changed.
-(rerunfilecheck)             Checksum: 86A5DA8810EB1C1202B04108A0BCBD1C;235.
+(rerunfilecheck)             Checksum: CFA4053CE721670ED900147C397B4BAE;187.
 
 
 LaTeX Font Warning: Size substitutions with differences
 (Font)              up to 1.0pt have occurred.
 
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 196.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 202.
  ) 
 Here is how much of TeX's memory you used:
- 20806 strings out of 493013
- 400830 string characters out of 6139318
- 490133 words of memory out of 5000000
- 23782 multiletter control sequences out of 15000+600000
- 5458 words of font info for 20 fonts, out of 8000000 for 9000
+ 21878 strings out of 493013
+ 420030 string characters out of 6139318
+ 509113 words of memory out of 5000000
+ 24840 multiletter control sequences out of 15000+600000
+ 8820 words of font info for 33 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 52i,11n,64p,1047b,1065s stack positions out of 5000i,500n,10000p,200000b,80000s
-</usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmss10.pfb></usr/share/
-texmf-dist/fonts/type1/public/amsfonts/cm/cmss12.pfb></usr/share/texmf-dist/fon
-ts/type1/public/amsfonts/cm/cmss17.pfb>
-Output written on iir.pdf (42 pages, 954712 bytes).
+ 52i,11n,79p,1047b,1058s stack positions out of 5000i,500n,10000p,200000b,80000s
+</usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/
+texmf-dist/fonts/type1/public/amsfonts/cm/cmss10.pfb></usr/share/texmf-dist/fon
+ts/type1/public/amsfonts/cm/cmss12.pfb></usr/share/texmf-dist/fonts/type1/publi
+c/amsfonts/cm/cmss17.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/
+cmssi10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmssi8.pfb>
+Output written on iir.pdf (40 pages, 674377 bytes).
 PDF statistics:
- 337 PDF objects out of 1000 (max. 8388607)
- 235 compressed objects within 3 object streams
- 90 named destinations out of 1000 (max. 500000)
- 218 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 331 PDF objects out of 1000 (max. 8388607)
+ 232 compressed objects within 3 object streams
+ 85 named destinations out of 1000 (max. 500000)
+ 200 words of extra memory for PDF output out of 10000 (max. 10000000)
 
