@@ -1,5 +1,5 @@
 \documentclass{beamer}
-\usepackage{caption}
+\setbeamertemplate{caption}{\raggedright\insertcaption\par}
 \usetheme{Median}
 \title{IIR Filter IP}
 \date{\today}
@@ -25,7 +25,7 @@
 
 \begin{frame}{System Design}
   \center{
-    \includegraphics[height=6cm]
+    \includegraphics[height=6.5cm]
                     {system-design-final.png}}
 \end{frame}
 
@@ -51,9 +51,8 @@
 \begin{frame}{IIR IP --- Arithmetic}
   \includegraphics[height=3cm]
                   {add0.png}
-\end{frame}
-\begin{frame}{IIR IP --- Arithmetic}
-  \includegraphics[height=2.5cm]
+
+  \includegraphics[height=2.66cm]
                   {add1.png}
 \end{frame}
 \begin{frame}{IIR IP --- Arithmetic}
@@ -171,7 +170,7 @@
       \centering
       \includegraphics[height=6.5cm]
                       {lowpass-final.png}
-                      \caption*{$F_s = 48$kHz, $F_c = 10.8$kHz}
+                      \caption{$F_s = 48$kHz, $F_c = 10.8$kHz}
   \end{figure}}
 \end{frame}
 \begin{frame}{Example Outputs --- Highpass}
@@ -180,7 +179,7 @@
       \centering
       \includegraphics[height=6.5cm]
                       {highpass-final.png}
-                      \caption*{$F_s = 48$kHz, $F_c = 10.8$kHz}
+                      \caption{$F_s = 48$kHz, $F_c = 10.8$kHz}
   \end{figure}}
 \end{frame}
 \begin{frame}{Example Outputs --- Bandpass}
@@ -189,7 +188,7 @@
       \centering
       \includegraphics[height=6.5cm]
                       {bandpass-final.png}
-                      \caption*{$F_s = 48$kHz, Pass band = 8.4kHz to 13.2kHz}
+                      \caption{$F_s = 48$kHz, Pass band = 8.4kHz to 13.2kHz}
   \end{figure}}
 \end{frame}
 

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2015/dev/Debian) (preloaded format=pdflatex 2017.3.8)  25 APR 2017 20:29
+This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2015/dev/Debian) (preloaded format=pdflatex 2017.3.8)  30 APR 2017 21:49
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -514,6 +514,53 @@ Package hyperref Info: Option `colorlinks' set `true' on input line 13.
 (/usr/share/texlive/texmf-dist/tex/latex/oberdiek/hypcap.sty
 Package: hypcap 2011/02/16 v1.11 Adjusting the anchors of captions (HO)
 )
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/graphicx.sty
+Package: graphicx 2014/04/25 v1.0g Enhanced LaTeX Graphics (DPC,SPQR)
+
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/graphics.sty
+Package: graphics 2009/02/05 v1.0o Standard LaTeX Graphics (DPC,SPQR)
+
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/trig.sty
+Package: trig 1999/03/16 v1.09 sin cos tan (DPC)
+)
+(/usr/share/texlive/texmf-dist/tex/latex/latexconfig/graphics.cfg
+File: graphics.cfg 2010/04/23 v1.9 graphics configuration of TeX Live
+)
+Package graphics Info: Driver file: pdftex.def on input line 91.
+
+(/usr/share/texlive/texmf-dist/tex/latex/pdftex-def/pdftex.def
+File: pdftex.def 2011/05/27 v0.06d Graphics/color for pdfTeX
+\Gread@gobject=\count226
+))
+\Gin@req@height=\dimen116
+\Gin@req@width=\dimen117
+)
+(/usr/share/texlive/texmf-dist/tex/latex/caption/caption.sty
+Package: caption 2013/05/02 v3.3-89 Customizing captions (AR)
+
+(/usr/share/texlive/texmf-dist/tex/latex/caption/caption3.sty
+Package: caption3 2013/05/02 v1.6-88 caption3 kernel (AR)
+Package caption3 Info: TeX engine: e-TeX on input line 57.
+\captionmargin=\dimen118
+\captionmargin@=\dimen119
+\captionwidth=\dimen120
+\caption@tempdima=\dimen121
+\caption@indent=\dimen122
+\caption@parindent=\dimen123
+\caption@hangindent=\dimen124
+)
+\c@ContinuedFloat=\count227
+Package caption Info: hyperref package is loaded.
+Package caption Info: hypcap package is loaded.
+)
+(/usr/share/texlive/texmf-dist/tex/latex/caption/subcaption.sty
+Package: subcaption 2013/02/03 v1.1-62 Sub-captions (AR)
+\c@subfigure=\count228
+\c@subtable=\count229
+)
+(/usr/share/texlive/texmf-dist/tex/latex/placeins/placeins.sty
+Package: placeins 2005/04/18  v 2.2
+)
 Package biblatex Info: Trying to load language 'english'...
 Package biblatex Info: ... file 'english.lbx' found.
 
@@ -528,27 +575,27 @@ Package csquotes Info: Redefining alias 'default' -> 'english'.
 (./iir-ip-report.aux)
 \openout1 = `iir-ip-report.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 29.
-LaTeX Font Info:    ... okay on input line 29.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 29.
-LaTeX Font Info:    ... okay on input line 29.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 29.
-LaTeX Font Info:    ... okay on input line 29.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 29.
-LaTeX Font Info:    ... okay on input line 29.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 29.
-LaTeX Font Info:    ... okay on input line 29.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 29.
-LaTeX Font Info:    ... okay on input line 29.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 29.
-LaTeX Font Info:    Try loading font information for TS1+cmr on input line 29.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 32.
+LaTeX Font Info:    ... okay on input line 32.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 32.
+LaTeX Font Info:    ... okay on input line 32.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 32.
+LaTeX Font Info:    ... okay on input line 32.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 32.
+LaTeX Font Info:    ... okay on input line 32.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 32.
+LaTeX Font Info:    ... okay on input line 32.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 32.
+LaTeX Font Info:    ... okay on input line 32.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 32.
+LaTeX Font Info:    Try loading font information for TS1+cmr on input line 32.
  (/usr/share/texlive/texmf-dist/tex/latex/base/ts1cmr.fd
 File: ts1cmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
-LaTeX Font Info:    ... okay on input line 29.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 29.
-LaTeX Font Info:    ... okay on input line 29.
-LaTeX Font Info:    Try loading font information for OT1+ptm on input line 29.
+LaTeX Font Info:    ... okay on input line 32.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 32.
+LaTeX Font Info:    ... okay on input line 32.
+LaTeX Font Info:    Try loading font information for OT1+ptm on input line 32.
 
 (/usr/share/texlive/texmf-dist/tex/latex/psnfss/ot1ptm.fd
 File: ot1ptm.fd 2001/06/04 font definitions for OT1/ptm.
@@ -596,8 +643,8 @@ Package biblatex Info: Automatic encoding selection.
 Package biblatex Info: Trying to load bibliographic data...
 Package biblatex Info: ... file 'iir-ip-report.bbl' not found.
 No file iir-ip-report.bbl.
-Package biblatex Info: Reference section=0 on input line 29.
-Package biblatex Info: Reference segment=0 on input line 29.
+Package biblatex Info: Reference section=0 on input line 32.
+Package biblatex Info: Reference segment=0 on input line 32.
 \AtBeginShipoutBox=\box26
 (/usr/share/texlive/texmf-dist/tex/latex/graphics/color.sty
 Package: color 2014/04/23 v1.1a Standard LaTeX Color (DPC)
@@ -606,51 +653,67 @@ Package: color 2014/04/23 v1.1a Standard LaTeX Color (DPC)
 File: color.cfg 2007/01/18 v1.5 color configuration of teTeX/TeXLive
 )
 Package color Info: Driver file: pdftex.def on input line 137.
+)
+Package hyperref Info: Link coloring ON on input line 32.
 
-(/usr/share/texlive/texmf-dist/tex/latex/pdftex-def/pdftex.def
-File: pdftex.def 2011/05/27 v0.06d Graphics/color for pdfTeX
-\Gread@gobject=\count226
-
-(/usr/share/texlive/texmf-dist/tex/context/base/supp-pdf.mkii
-[Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count227
-\scratchdimen=\dimen116
-\scratchbox=\box27
-\nofMPsegments=\count228
-\nofMParguments=\count229
-\everyMPshowfont=\toks17
-\MPscratchCnt=\count230
-\MPscratchDim=\dimen117
-\MPnumerator=\count231
-\makeMPintoPDFobject=\count232
-\everyMPtoPDFconversion=\toks18
-)))
-Package hyperref Info: Link coloring ON on input line 29.
- (/usr/share/texlive/texmf-dist/tex/latex/hyperref/nameref.sty
+(/usr/share/texlive/texmf-dist/tex/latex/hyperref/nameref.sty
 Package: nameref 2012/10/27 v2.43 Cross-referencing by name of section
 
 (/usr/share/texlive/texmf-dist/tex/generic/oberdiek/gettitlestring.sty
 Package: gettitlestring 2010/12/03 v1.4 Cleanup title references (HO)
 )
-\c@section@level=\count233
+\c@section@level=\count230
 )
-LaTeX Info: Redefining \ref on input line 29.
-LaTeX Info: Redefining \pageref on input line 29.
-LaTeX Info: Redefining \nameref on input line 29.
+LaTeX Info: Redefining \ref on input line 32.
+LaTeX Info: Redefining \pageref on input line 32.
+LaTeX Info: Redefining \nameref on input line 32.
 
 (./iir-ip-report.out) (./iir-ip-report.out)
 \@outlinefile=\write4
 \openout4 = `iir-ip-report.out'.
 
+
+(/usr/share/texlive/texmf-dist/tex/context/base/supp-pdf.mkii
+[Loading MPS to PDF converter (version 2006.09.02).]
+\scratchcounter=\count231
+\scratchdimen=\dimen125
+\scratchbox=\box27
+\nofMPsegments=\count232
+\nofMParguments=\count233
+\everyMPshowfont=\toks17
+Normal \count register pool exhausted, switching to extended pool.
+\MPscratchCnt=\count277
+\MPscratchDim=\dimen126
+\MPnumerator=\count278
+\makeMPintoPDFobject=\count279
+\everyMPtoPDFconversion=\toks18
+) (/usr/share/texlive/texmf-dist/tex/latex/oberdiek/epstopdf-base.sty
+Package: epstopdf-base 2010/02/09 v2.5 Base part for package epstopdf
+
+(/usr/share/texlive/texmf-dist/tex/latex/oberdiek/grfext.sty
+Package: grfext 2010/08/19 v1.1 Manage graphics extensions (HO)
+)
+Package grfext Info: Graphics extension search list:
+(grfext)             [.png,.pdf,.jpg,.mps,.jpeg,.jbig2,.jb2,.PNG,.PDF,.JPG,.JPE
+G,.JBIG2,.JB2,.eps]
+(grfext)             \AppendGraphicsExtensions on input line 452.
+
+(/usr/share/texlive/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
+File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
+e
+))
+Package caption Info: Begin \AtBeginDocument code.
+Package caption Info: End \AtBeginDocument code.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <14.4> on input line 34.
+(Font)              <14.4> on input line 37.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <7> on input line 34.
- [1
+(Font)              <7> on input line 37.
+
+[1
 
 {/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}]
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <17.28> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 37.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 40.
  (./iir-ip-report.toc
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <12> not available
 (Font)              Font shape `OT1/ptm/b/n' tried instead on input line 5.
@@ -668,45 +731,199 @@ pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has
 been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.39 \newpage
+l.42 \newpage
               [1]
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <14.4> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 50.
-LaTeX Font Info:    Try loading font information for OT1+pcr on input line 52.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 52.
+LaTeX Font Info:    Try loading font information for OT1+pcr on input line 54.
  (/usr/share/texlive/texmf-dist/tex/latex/psnfss/ot1pcr.fd
 File: ot1pcr.fd 2001/06/04 font definitions for OT1/pcr.
 )
-[2] [3]
+[2]
+<../presentation/standard-coeffs-48kfs-10800fc.png, id=101, 119.69719pt x 127.9
+7812pt>
+File: ../presentation/standard-coeffs-48kfs-10800fc.png Graphic file (type png)
 
-LaTeX Warning: Empty bibliography on input line 82.
+ <use ../presentation/standard-coeffs-48kfs-10800fc.png>
+Package pdftex.def Info: ../presentation/standard-coeffs-48kfs-10800fc.png used
+ on input line 110.
+(pdftex.def)             Requested size: 133.06635pt x 142.26378pt.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <5> on input line 124.
+ [3]
+<../presentation/standard-coeffs-100kfs-5kfc.png, id=109, 129.48375pt x 127.225
+31pt>
+File: ../presentation/standard-coeffs-100kfs-5kfc.png Graphic file (type png)
+ <use ../presentation/standard-coeffs-100kfs-5kfc.png>
+Package pdftex.def Info: ../presentation/standard-coeffs-100kfs-5kfc.png used o
+n input line 129.
+(pdftex.def)             Requested size: 144.79555pt x 142.26378pt.
+ [4 <../presentation/standard-coeffs-48kfs-10800fc.png> <../presentation/standa
+rd-coeffs-100kfs-5kfc.png>] [5]
+<../presentation/biquad-coeffs-section1-48kfs-10800fc.png, id=131, 146.04562pt 
+x 130.23656pt>
+File: ../presentation/biquad-coeffs-section1-48kfs-10800fc.png Graphic file (ty
+pe png)
+ <use ../presentation/biquad-coeffs-section1-48kfs-10800fc.png>
+Package pdftex.def Info: ../presentation/biquad-coeffs-section1-48kfs-10800fc.p
+ng used on input line 179.
+(pdftex.def)             Requested size: 135.00137pt x 120.39935pt.
 
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 87.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 87.
-(./iir-ip-report.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 87.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 87.
+<../presentation/biquad-coeffs-section2-48kfs-10800fc.png, id=132, 144.54pt x 1
+35.50626pt>
+File: ../presentation/biquad-coeffs-section2-48kfs-10800fc.png Graphic file (ty
+pe png)
+ <use ../presentation/biquad-coeffs-section2-48kfs-10800fc.png>
+Package pdftex.def Info: ../presentation/biquad-coeffs-section2-48kfs-10800fc.p
+ng used on input line 183.
+(pdftex.def)             Requested size: 135.00137pt x 126.56949pt.
+
+<../presentation/overflow-coeffs.png, id=133, 201.75375pt x 142.28156pt>
+File: ../presentation/overflow-coeffs.png Graphic file (type png)
+
+<use ../presentation/overflow-coeffs.png>
+Package pdftex.def Info: ../presentation/overflow-coeffs.png used on input line
+ 191.
+(pdftex.def)             Requested size: 201.75017pt x 142.26378pt.
+ [6 <../presentation/biquad-coeffs-section1-48kfs-10800fc.png> <../presentation
+/biquad-coeffs-section2-48kfs-10800fc.png>] [7 <../presentation/overflow-coeffs
+.png>]
+<../presentation/scaled-window.png, id=152, 433.62pt x 313.9228pt>
+File: ../presentation/scaled-window.png Graphic file (type png)
+
+<use ../presentation/scaled-window.png>
+Package pdftex.def Info: ../presentation/scaled-window.png used on input line 2
+37.
+(pdftex.def)             Requested size: 314.40945pt x 227.62204pt.
+
+<../presentation/scaled-with-l1.png, id=153, 201.00093pt x 162.6075pt>
+File: ../presentation/scaled-with-l1.png Graphic file (type png)
+
+<use ../presentation/scaled-with-l1.png>
+Package pdftex.def Info: ../presentation/scaled-with-l1.png used on input line 
+245.
+(pdftex.def)             Requested size: 179.99725pt x 145.61592pt.
+
+<../presentation/scaled-with-L2.png, id=154, 205.5178pt x 177.66376pt>
+File: ../presentation/scaled-with-L2.png Graphic file (type png)
+
+<use ../presentation/scaled-with-L2.png>
+Package pdftex.def Info: ../presentation/scaled-with-L2.png used on input line 
+249.
+(pdftex.def)             Requested size: 179.99725pt x 155.60178pt.
+ [8 <../presentation/scaled-window.png> <../presentation/scaled-with-l1.png> <.
+./presentation/scaled-with-L2.png>]
+<../presentation/iir-ip-external-feedback.png, id=167, 433.62pt x 275.52937pt>
+File: ../presentation/iir-ip-external-feedback.png Graphic file (type png)
+
+<use ../presentation/iir-ip-external-feedback.png>
+Package pdftex.def Info: ../presentation/iir-ip-external-feedback.png used on i
+nput line 280.
+(pdftex.def)             Requested size: 268.67621pt x 170.71652pt.
+ [9 <../presentation/iir-ip-external-feedback.png>] [10] [11]
+<../presentation/data-input.png, id=202, 544.0325pt x 183.68625pt>
+File: ../presentation/data-input.png Graphic file (type png)
+
+<use ../presentation/data-input.png>
+Package pdftex.def Info: ../presentation/data-input.png used on input line 369.
+
+(pdftex.def)             Requested size: 450.0pt x 151.9438pt.
+
+<../presentation/mult.png, id=203, 552.0625pt x 183.68625pt>
+File: ../presentation/mult.png Graphic file (type png)
+
+<use ../presentation/mult.png>
+Package pdftex.def Info: ../presentation/mult.png used on input line 376.
+(pdftex.def)             Requested size: 450.0pt x 149.73518pt.
+
+<../presentation/add0.png, id=204, 649.42625pt x 184.69pt>
+File: ../presentation/add0.png Graphic file (type png)
+
+<use ../presentation/add0.png>
+Package pdftex.def Info: ../presentation/add0.png used on input line 383.
+(pdftex.def)             Requested size: 450.0pt x 127.9773pt.
+
+<../presentation/add1.png, id=205, 609.27625pt x 153.57375pt>
+File: ../presentation/add1.png Graphic file (type png)
+
+<use ../presentation/add1.png>
+Package pdftex.def Info: ../presentation/add1.png used on input line 390.
+(pdftex.def)             Requested size: 450.0pt x 113.42953pt.
+
+<../presentation/final-add.png, id=206, 503.8825pt x 123.46124pt>
+File: ../presentation/final-add.png Graphic file (type png)
+
+<use ../presentation/final-add.png>
+Package pdftex.def Info: ../presentation/final-add.png used on input line 397.
+(pdftex.def)             Requested size: 450.0pt x 110.25879pt.
+
+<../presentation/output.png, id=207, 502.87875pt x 167.62625pt>
+File: ../presentation/output.png Graphic file (type png)
+
+<use ../presentation/output.png>
+Package pdftex.def Info: ../presentation/output.png used on input line 404.
+(pdftex.def)             Requested size: 450.0pt x 150.00024pt.
+ [12 <../presentation/data-input.png> <../presentation/mult.png> <../presentati
+on/add0.png>]
+<../presentation/zynq-communication-design.png, id=213, 689.57625pt x 316.18124
+pt>
+File: ../presentation/zynq-communication-design.png Graphic file (type png)
+ <use ../presentation/zynq-communication-design.png>
+Package pdftex.def Info: ../presentation/zynq-communication-design.png used on 
+input line 415.
+(pdftex.def)             Requested size: 450.0pt x 206.3307pt.
+
+<../presentation/coeff.png, id=214, 480.79625pt x 242.9075pt>
+File: ../presentation/coeff.png Graphic file (type png)
+
+<use ../presentation/coeff.png>
+Package pdftex.def Info: ../presentation/coeff.png used on input line 422.
+(pdftex.def)             Requested size: 450.0pt x 227.35455pt.
+
+<../presentation/zynq-coeff.png, id=215, 447.6725pt x 135.50626pt>
+File: ../presentation/zynq-coeff.png Graphic file (type png)
+
+<use ../presentation/zynq-coeff.png>
+Package pdftex.def Info: ../presentation/zynq-coeff.png used on input line 429.
+
+(pdftex.def)             Requested size: 450.0pt x 136.2151pt.
+ [13 <../presentation/add1.png> <../presentation/final-add.png> <../presentatio
+n/output.png>]
+
+LaTeX Warning: Text page 14 contains only floats.
+
+[14 <../presentation/zynq-communication-design.png> <../presentation/coeff.png>
+ <../presentation/zynq-coeff.png>]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 441.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 441.
+ (./iir-ip-report.aux)
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 441.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 441.
 Package rerunfilecheck Info: File `iir-ip-report.out' has not changed.
-(rerunfilecheck)             Checksum: D95590735C5F515C5ADF91671C9E0D78;215.
+(rerunfilecheck)             Checksum: 3527D47C148CEAAF19AFE43C4F69094C;854.
 Package logreq Info: Writing requests to 'iir-ip-report.run.xml'.
 \openout1 = `iir-ip-report.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 11783 strings out of 495020
- 189744 string characters out of 6181325
- 602755 words of memory out of 5000000
- 14864 multiletter control sequences out of 15000+600000
- 17944 words of font info for 41 fonts, out of 8000000 for 9000
+ 13281 strings out of 495020
+ 217519 string characters out of 6181325
+ 634828 words of memory out of 5000000
+ 16260 multiletter control sequences out of 15000+600000
+ 24383 words of font info for 49 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
- 44i,6n,35p,843b,1519s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 44i,8n,38p,843b,1517s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/share/texlive/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/share/texliv
-e/texmf-dist/fonts/type1/urw/courier/ucrr8a.pfb></usr/share/texlive/texmf-dist/
-fonts/type1/urw/times/utmb8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw
-/times/utmr8a.pfb>
-Output written on iir-ip-report.pdf (4 pages, 40853 bytes).
+e/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/share/texlive/texm
+f-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/share/texlive/texmf-dist/
+fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texlive/texmf-dist/fonts/t
+ype1/urw/courier/ucrr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/time
+s/utmb8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></
+usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
+Output written on iir-ip-report.pdf (15 pages, 368702 bytes).
 PDF statistics:
- 61 PDF objects out of 1000 (max. 8388607)
- 51 compressed objects within 1 object stream
- 9 named destinations out of 1000 (max. 500000)
- 33 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 265 PDF objects out of 1000 (max. 8388607)
+ 210 compressed objects within 3 object streams
+ 54 named destinations out of 1000 (max. 500000)
+ 219 words of extra memory for PDF output out of 10000 (max. 10000000)
 

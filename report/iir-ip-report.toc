@@ -6,6 +6,30 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\numberline {1.1}Important Files}{2}{subsection.1.1}
 \defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {1.2}Licensing}{2}{subsection.1.2}
+\defcounter {refsection}{0}\relax 
 \contentsline {section}{\numberline {2}Single-Section}{3}{section.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {2.1}BiQuad}{3}{subsection.2.1}
+\contentsline {subsection}{\numberline {2.1}Coefficients}{3}{subsection.2.1}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {2.2}Benefits}{4}{subsection.2.2}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {3}BiQuad}{6}{section.3}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {3.1}Coefficients}{6}{subsection.3.1}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {3.2}Scaling}{7}{subsection.3.2}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {3.3}Benefits}{9}{subsection.3.3}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {4}IIR IP}{9}{section.4}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {5}Zynq Communication}{11}{section.5}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {6}Example Outputs}{11}{section.6}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {7}Conclusion}{11}{section.7}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {A}Inside the IP}{12}{appendix.A}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {B}Communication Protocol}{13}{appendix.B}
