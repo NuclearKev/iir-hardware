@@ -355,8 +355,52 @@ coefficient that you wish to upload to the IP. Earlier in the program, the
 is how simple the communication is.
 
 \section{Example Outputs}
+Found in Appendix C: Examples will be some example outputs of the system
+discussed in this report. In \textbf{Figure \ref{fig:c0}}, you will see the
+attempt at a lowpass filter. First thing you'll probably notice is that the
+amplitude is off. We are about 30dB too low. Other than that, this filter
+actually preforms as intended. It is dead at around 10kHz, which is what it
+should be. The next example isn't as good, as shown in \textbf{Figure
+  \ref{fig:c1}}. This time the first thing that you will notice is that the
+passing section is very unstable. However, it does ``pass'' the correct
+frequencies. Although it isn't pretty, it still works to an extent. The final
+example, shown in \textbf{Figure \ref{fig:c2}}, is a complete mess. It is an
+attempt at a bandpass and, as you will see, isn't a very good one. It has a
+passing region but it's very unstable and isn't the correct frequency
+range. It's off by about 3kHz. In the end, these examples are not great but do
+so that the system \emph{works} just very poorly.
 
 \section{Conclusion}
+In the end, the project fell flat and didn't work as intended. This isn't,
+however, a bad thing. Along with the struggles of the project, I learn a lot
+about IIRs and hardware design in general. This information may be useful later
+in my career. There are many reasons as to why the project didn't work. Some of
+the problems may have been the following: Not multiplying by the gain, no FSM in
+the IP, and not accurate data/coefficient. Not multiplying by the gain could be
+the reason the amplitude was so low. However, I don't believe this is entirely
+what caused the problem due to the fact all the gains where close to 1
+(somewhere between .8 and 1.3). Even if we multiplied by these gains, it would
+only vary the amplitude slightly. Not having a FSM in the IP could be one of the
+things that caused it's inconsistency. Without an FSM, we don't have a way to
+flow control the process. Instead, I rely on sensitivity lists to move to the
+next process. It would have probably been a better idea to use that, but with an
+FSM that would only allow certain things to happen once a blocker register was
+set or reset. Lastly, there is a surprising amount of inaccuracy in using 16 bit
+coefficients. Some of the more high quality designs I saw online used 32 bit
+coefficients. This may or may not have had something to do with the
+inconsistency of the output.
+
+When it comes down to it, the IIR is not something that is favorable to do
+hardware. There are a lot of areas that can cause issues due to the complex
+nature of the calculation. Just the arithmetic itself is difficult in hardware
+because of overflowing and scaling. On top of this, attempting to make it
+generic is something that seems reasonable but may not be easily
+completed. Because of all the issues and complexities of the IIR, I believe that
+this is an application for a microcontroller or processor. On those systems, we
+don't have \emph{any} of these issues. We can use floats or doubles for all the
+data, eliminating all the overflow, scaling, and coefficients related
+problems. In conclusion, I believe that the IIR is \emph{not} a good application
+for a FPGA but an application for a microcontroller instead.
 
 \newpage
 
@@ -406,6 +450,7 @@ is how simple the communication is.
                   \label{fig:a5}
 \end{figure}
 
+
 \newpage
 
 \section{Communication Protocol}
@@ -432,6 +477,30 @@ is how simple the communication is.
 \end{figure}
 
 \newpage
+
+\section{Examples}
+\begin{figure}[!htb]
+  \centering
+  \includegraphics[width=\textwidth]
+                  {../presentation/lowpass-final.png}
+                  \caption{GPIO Hook Ups}
+                  \label{fig:c0}
+\end{figure}
+\begin{figure}[!htb]
+  \centering
+  \includegraphics[width=\textwidth]
+                  {../presentation/highpass-final.png}
+                  \caption{Coefficient Input Process}
+                  \label{fig:c1}
+\end{figure}
+\begin{figure}[!htb]
+  \centering
+  \includegraphics[width=\textwidth]
+                  {../presentation/bandpass-final.png}
+                  \caption{Coefficient Output Loop}
+                  \label{fig:c2}
+\end{figure}
+
 
 %% \printbibliography[
 %% heading=bibintoc,
