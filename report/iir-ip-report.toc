@@ -6,32 +6,32 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\numberline {1.1}Important Files}{2}{subsection.1.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {1.2}Licensing}{2}{subsection.1.2}
+\contentsline {subsection}{\numberline {1.2}Licensing}{3}{subsection.1.2}
 \defcounter {refsection}{0}\relax 
 \contentsline {section}{\numberline {2}Single-Section}{3}{section.2}
 \defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\numberline {2.1}Coefficients}{3}{subsection.2.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {2.2}Benefits}{4}{subsection.2.2}
+\contentsline {subsection}{\numberline {2.2}Benefits}{5}{subsection.2.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {3}BiQuad}{6}{section.3}
+\contentsline {section}{\numberline {3}BiQuad}{5}{section.3}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {3.1}Coefficients}{6}{subsection.3.1}
+\contentsline {subsection}{\numberline {3.1}Coefficients}{5}{subsection.3.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {3.2}Scaling}{7}{subsection.3.2}
+\contentsline {subsection}{\numberline {3.2}Scaling}{6}{subsection.3.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {3.3}Benefits}{9}{subsection.3.3}
+\contentsline {subsection}{\numberline {3.3}Benefits}{8}{subsection.3.3}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {4}IIR IP}{9}{section.4}
+\contentsline {section}{\numberline {4}IIR IP}{8}{section.4}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {5}Zynq Communication}{11}{section.5}
+\contentsline {section}{\numberline {5}Zynq Communication}{10}{section.5}
 \defcounter {refsection}{0}\relax 
 \contentsline {section}{\numberline {6}Example Outputs}{11}{section.6}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {7}Conclusion}{12}{section.7}
+\contentsline {section}{\numberline {7}Conclusion}{11}{section.7}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {A}Inside the IP}{14}{appendix.A}
+\contentsline {section}{\numberline {A}Inside the IP}{13}{appendix.A}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {B}Communication Protocol}{15}{appendix.B}
+\contentsline {section}{\numberline {B}Communication Protocol}{14}{appendix.B}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {C}Examples}{17}{appendix.C}
+\contentsline {section}{\numberline {C}Examples}{16}{appendix.C}

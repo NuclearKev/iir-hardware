@@ -32,7 +32,7 @@
 \begin{document}
 
 \title{IIR IP}
-\author{Kevin Bloom \\ Rev A}
+\author{Kevin Bloom}
 \maketitle
 
 \newpage
@@ -47,7 +47,7 @@ easy to complete; seeing as completing this task in software isn't a huge
 deal. To my surprise, this was far from true. The calculation for IIR is quite
 difficult to complete in hardware, as I will discuss in this report. I will be
 discussing the theory behind the IIR in hardware, the major issues that can
-occur, and how one could complete this task in the future.
+occur, and my work on the subject.
 
 \subsection{Important Files}
 Inside of this project, there are a few different files that are important.
@@ -58,19 +58,24 @@ file. Please note that the HTML version doesn't contain all of the clock
 stamps. Inside of \texttt{presentation/} is the presentation and its source. The
 source for this report can be found in \texttt{report/}. Inside of
 \texttt{projects/} will be all of the different projects that I worked on. The
-important ones to note are: \texttt{2nd-order-single-section/},
-\texttt{complex-iir/}, and \texttt{the-really-big-one/}.
+important ones to note are: \texttt{single-section/},
+\texttt{complex-iir/}, \texttt{multi-stage-hw-iir-final/}, and
+\texttt{multi-stage-gen-iir/}.
 
 Just so that it's easier to find your way, I will do a quick description of each
 project. This will prevent you from having to search
-around. \texttt{2nd-order-single-section/} is a design that only uses a single
-section BiQuad. This was used to prove that there was something wrong with the
-BiQuad implementation of the IP. \texttt{complex-iir/} contains a design that
-doesn't use the Zynq. It does everything in hardware. The current setup uses
-internally selected coefficients, opposed to the normally externally fed
-coefficients. Lastly, \texttt{the-really-big-one/} is a design that uses pretty
-much everything. It is set up with 4 BiQuads cascaded serially and uses the dmux
-and mux IPs to make the design generic.
+around. \texttt{single-section/} is a design that only uses a single section
+BiQuad. This was used to prove that there was something wrong with the BiQuad
+implementation of the IP. \texttt{complex-iir/} contains a design that doesn't
+use the Zynq. It does everything in hardware. The current setup uses internally
+selected coefficients, opposed to the normally externally fed
+coefficients. \texttt{multi-stage-hw-iir-final/} is the project that I use in
+the presentation because it meets the project requires better than the
+others. This project uses individual GPIOs to feed coefficients to each IIR
+stage. Lastly, \texttt{multi-stage-gen-iir/} is the largest project. It contains
+extra hardware designs called \texttt{mux} and \texttt{dmux}. These are used to
+allow the user to select which output they want to view and/or create a smaller
+ordered filter with the existing hardware.
 
 \subsection{Licensing}
 The last thing that should be noted is that any code that was written by me,
@@ -80,13 +85,13 @@ in the root directory of the project. This includes any IIR, FIR, mux, and demux
 VHDL files and any IIR communication C files. It is important that whomever is
 given the projects is also given the \emph{same freedoms as me, Kevin
   Bloom}. Please make sure that this happens. Also, if someone is given this
-project \emph{without those freedoms}, please
+project \emph{without those freedoms}, please see
 \underline{\href{https://github.com/nuclearkev/iir-hardware}{my GitHub page}} to
 receive copies of my code \emph{with those freedoms}.
 
 
 \section{Single-Section}
-This section I will discuss the problem related to using a single-section or
+In this section, I will discuss the problem related to using a single-section or
 standard form IIR in hardware. The term \emph{single-section} is referring to
 the number of sections, or stages, needed to complete the calculation. In a
 single-section filter, there is only 1 section needed. This means that there is
@@ -102,7 +107,17 @@ concerned about. Another thing you may notice is that the number of coefficients
 in each pair (whether numerator or denominator) is probably larger than in the
 multi-section or \emph{BiQuad} form. In a BiQuad form both coefficient arrays
 have 3 elements yet in the single-section they may have more. Take a look at the
-follow example in \textbf{Figure 1}:
+example in \textbf{Figure 1} to see this. Here, you will see that we have 5
+coefficients in each array. This may not seem problematic and it really
+isn't. It would be fairly easy to design hardware that could take a varying
+number of coefficients. All you would need to do have a maximum number of
+coefficients set, then depending on the number passed in, you would clear the
+not-in-use registers to zero. In theory, this would work great. However, there
+is still a major issue with using single-section that doesn't have to do with
+number of coefficients. It has to do with the \emph{size} of the
+coefficients. Take a look at \textbf{Figure 2} and you will notice 2 interesting
+things: the numerator coefficients are quite small and the denominator
+coefficients are big.\footnote{In perspective to the numerator coefficients}
 
 \begin{figure}[!htb]
   \centering
@@ -110,18 +125,6 @@ follow example in \textbf{Figure 1}:
                   {../presentation/standard-coeffs-48kfs-10800fc.png}
                   \caption{$F_s = 48$kHz, $F_c = 10.8$kHz}
 \end{figure}
-
-Here, you will see that we have 5 coefficients in each array. This may not seem
-problematic and it really isn't. It would be fairly easy to design hardware that
-could take a varying number of coefficients. All you would need to do have a
-maximum number of coefficients set, then depending on the number passed in, you
-would clear the not-in-use registers to zero. In theory, this would work
-great. However, there is still a major issue with using single-section that
-doesn't have to do with number of coefficients. It has to do with the
-\emph{size} of the coefficients. Take a look at \textbf{Figure 2} and you will
-notice 2 interesting things: the numerator coefficients are quite small and the
-denominator coefficients are big.\footnote{In perspective to the numerator
-  coefficients}
 
 \begin{figure}[!htb]
   \centering
@@ -141,7 +144,7 @@ impossible to create a generic IIR filter using the single-section
 method.\footnote{Well, one that's worth a damn that is.}
 
 \subsection{Benefits}
-Just because single-section isn't the best way to do things, it still have some
+Just because single-section isn't the best way to do things, it still has some
 benefits over the BiQuad method. Firstly, it is far simpler. You don't need to
 mess around with extra signals and cascading. It makes the design, as a whole,
 much simpler. Secondly, it requires less hardware. This is a good thing,
@@ -151,14 +154,12 @@ change and you can pick the sample frequency, this may be the better
 route. For this project, it is \emph{not} sufficient, thus, we need to
 investigate another method.
 
-\newpage
-
 \section{BiQuad}
 BiQuads are simple 2nd order filters that can be cascaded together to complete
 larger order applications. The BiQuad solves the biggest problem found with the
 single-section design, namely coefficient size. Don't get too excited because it
 opens up a new can of worms. Granted, these problems are far easier to handle,
-thus, making the BiQuad a far better way to execute IIRs in hardware. Let's
+thus, making the BiQuad a better way to execute IIRs in hardware. Let's
 break down the BiQuad just as we did the single-section.
 
 \subsection{Coefficients}
@@ -306,7 +307,7 @@ feedforward and feedback data is pulled directly from the input signals and
 is anded with there respective internal array. This fancy operation found on
 lines 78 and 79 are the hardware engineer's quick and dirty way of shifting
 elements in an array. This pushes the data from indexes 0-2 to 1-3 then shoves
-the anded value into index 0. Keep in mind that both array are the \emph{same
+the anded value into index 0. Keep in mind that both arrays are the \emph{same
   size}. This is for symmetry in the design. Normally the feedback array would
 only need 3 values, however, this throws off the design's symmetry and makes it
 look bad.
@@ -450,7 +451,6 @@ for a FPGA but an application for a microcontroller instead.
                   \label{fig:a5}
 \end{figure}
 
-
 \newpage
 
 \section{Communication Protocol}
@@ -483,21 +483,21 @@ for a FPGA but an application for a microcontroller instead.
   \centering
   \includegraphics[width=\textwidth]
                   {../presentation/lowpass-final.png}
-                  \caption{GPIO Hook Ups}
+                  \caption{$F_s = 48$kHz, $F_c = 10.8$kHz}
                   \label{fig:c0}
 \end{figure}
 \begin{figure}[!htb]
   \centering
   \includegraphics[width=\textwidth]
                   {../presentation/highpass-final.png}
-                  \caption{Coefficient Input Process}
+                  \caption{$F_s = 48$kHz, $F_c = 10.8$kHz}
                   \label{fig:c1}
 \end{figure}
 \begin{figure}[!htb]
   \centering
   \includegraphics[width=\textwidth]
                   {../presentation/bandpass-final.png}
-                  \caption{Coefficient Output Loop}
+                  \caption{$F_s = 48$kHz, Pass band = 8.4kHz to 13.2kHz}
                   \label{fig:c2}
 \end{figure}
 
